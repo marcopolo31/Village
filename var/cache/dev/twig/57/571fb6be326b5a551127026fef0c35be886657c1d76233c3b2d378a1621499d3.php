@@ -78,8 +78,20 @@ class __TwigTemplate_8835060e13cb395b9786537c27ffbd3a3144d7c1921b20f43afc2ea34a7
                 <li class=\"nav-item active\">
                   <a class=\"nav-link\" href=\"";
         // line 23
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("categories");
-        echo "\">Evenement/Actualité</a>
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("afficher_categorie", ["id" => 1]);
+        echo "\">Evenements</a>
+                </li>
+                <li class=\"nav-item active\">
+                  <a class=\"nav-link\" href=\"";
+        // line 26
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("afficher_categorie", ["id" => 2]);
+        echo "\">Actualités</a>
+                </li>
+                <li class=\"nav-item active\">
+                  <a class=\"nav-link\" href=\"";
+        // line 29
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
+        echo "\">Administration</a>
                 </li>
                 <li class=\"nav-item active\">
                   <a class=\"nav-link\" href=\"#\">Histoire</a>
@@ -97,16 +109,16 @@ class __TwigTemplate_8835060e13cb395b9786537c27ffbd3a3144d7c1921b20f43afc2ea34a7
             </div>
           </nav>
           <h1 class=\"border border-dark rounded p-2 m-2 text-white bg-primary\">";
-        // line 40
+        // line 46
         $this->displayBlock('monTitre', $context, $blocks);
         echo "</h1>
         ";
-        // line 41
+        // line 47
         $this->displayBlock('body', $context, $blocks);
-        // line 42
+        // line 48
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 43
+        // line 49
         echo "        <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
 <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
 <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
@@ -158,7 +170,7 @@ class __TwigTemplate_8835060e13cb395b9786537c27ffbd3a3144d7c1921b20f43afc2ea34a7
 
     }
 
-    // line 40
+    // line 46
     public function block_monTitre($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -176,7 +188,7 @@ class __TwigTemplate_8835060e13cb395b9786537c27ffbd3a3144d7c1921b20f43afc2ea34a7
 
     }
 
-    // line 41
+    // line 47
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -194,7 +206,7 @@ class __TwigTemplate_8835060e13cb395b9786537c27ffbd3a3144d7c1921b20f43afc2ea34a7
 
     }
 
-    // line 42
+    // line 48
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -224,7 +236,7 @@ class __TwigTemplate_8835060e13cb395b9786537c27ffbd3a3144d7c1921b20f43afc2ea34a7
 
     public function getDebugInfo()
     {
-        return array (  198 => 42,  180 => 41,  162 => 40,  144 => 9,  125 => 5,  110 => 43,  107 => 42,  105 => 41,  101 => 40,  81 => 23,  75 => 20,  63 => 10,  61 => 9,  54 => 5,  48 => 1,);
+        return array (  210 => 48,  192 => 47,  174 => 46,  156 => 9,  137 => 5,  122 => 49,  119 => 48,  117 => 47,  113 => 46,  93 => 29,  87 => 26,  81 => 23,  75 => 20,  63 => 10,  61 => 9,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -251,7 +263,13 @@ class __TwigTemplate_8835060e13cb395b9786537c27ffbd3a3144d7c1921b20f43afc2ea34a7
                   <a class=\"nav-link\" href=\"{{path('accueil')}}\">Accueil</a>
                 </li>
                 <li class=\"nav-item active\">
-                  <a class=\"nav-link\" href=\"{{path('categories')}}\">Evenement/Actualité</a>
+                  <a class=\"nav-link\" href=\"{{path('afficher_categorie', {id : 1})}}\">Evenements</a>
+                </li>
+                <li class=\"nav-item active\">
+                  <a class=\"nav-link\" href=\"{{path('afficher_categorie', {id : 2})}}\">Actualités</a>
+                </li>
+                <li class=\"nav-item active\">
+                  <a class=\"nav-link\" href=\"{{path('admin')}}\">Administration</a>
                 </li>
                 <li class=\"nav-item active\">
                   <a class=\"nav-link\" href=\"#\">Histoire</a>
@@ -276,6 +294,6 @@ class __TwigTemplate_8835060e13cb395b9786537c27ffbd3a3144d7c1921b20f43afc2ea34a7
 <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
     </body>
 </html>
-", "base.html.twig", "C:\\Users\\marcr\\Desktop\\symfony\\Village\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\marcr\\Desktop\\symfony\\village\\templates\\base.html.twig");
     }
 }

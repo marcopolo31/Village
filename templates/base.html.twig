@@ -20,7 +20,13 @@
                   <a class="nav-link" href="{{path('accueil')}}">Accueil</a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="{{path('categories')}}">Evenement/Actualité</a>
+                  <a class="nav-link" href="{{path('afficher_categorie', {id : 1})}}">Evenements</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="{{path('afficher_categorie', {id : 2})}}">Actualités</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="{{path('admin')}}">Administration</a>
                 </li>
                 <li class="nav-item active">
                   <a class="nav-link" href="#">Histoire</a>

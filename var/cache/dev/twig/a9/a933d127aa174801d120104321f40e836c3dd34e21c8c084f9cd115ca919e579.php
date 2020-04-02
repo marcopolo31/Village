@@ -131,10 +131,14 @@ class __TwigTemplate_70261badfc8da08c8d39f43866eeeecadf99cb1c71a526f98d9c87a18e7
             // line 16
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["information"], "date", [], "any", false, false, false, 16), "html", null, true);
             echo "</p>
-              <a href=\"#\" class=\"btn btn-primary\">";
-            // line 17
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["information"], "categorie", [], "any", false, false, false, 17), "libelle", [], "any", false, false, false, 17), "html", null, true);
+              
+              <a href=\"";
+            // line 18
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("afficher_categorie", ["id" => twig_get_attribute($this->env, $this->source, $context["information"], "id", [], "any", false, false, false, 18)]), "html", null, true);
+            echo "\" class=\"btn btn-primary\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["information"], "categorie", [], "any", false, false, false, 18), "libelle", [], "any", false, false, false, 18), "html", null, true);
             echo "</a>
+              
             </div>
           </div>
         ";
@@ -142,7 +146,7 @@ class __TwigTemplate_70261badfc8da08c8d39f43866eeeecadf99cb1c71a526f98d9c87a18e7
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['information'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 21
+        // line 23
         echo "    </div>
   </div>
 ";
@@ -166,7 +170,7 @@ class __TwigTemplate_70261badfc8da08c8d39f43866eeeecadf99cb1c71a526f98d9c87a18e7
 
     public function getDebugInfo()
     {
-        return array (  146 => 21,  136 => 17,  132 => 16,  128 => 15,  124 => 14,  119 => 12,  116 => 11,  112 => 10,  108 => 8,  98 => 7,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  150 => 23,  137 => 18,  132 => 16,  128 => 15,  124 => 14,  119 => 12,  116 => 11,  112 => 10,  108 => 8,  98 => 7,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -187,13 +191,15 @@ class __TwigTemplate_70261badfc8da08c8d39f43866eeeecadf99cb1c71a526f98d9c87a18e7
               <h5 class=\"card-title\">{{information.titre}}</h5>
               <p class=\"card-text\">{{information.libelle}}</p>
               <p class=\"card-text\">{{information.date}}</p>
-              <a href=\"#\" class=\"btn btn-primary\">{{information.categorie.libelle}}</a>
+              
+              <a href=\"{{path('afficher_categorie', {'id' : information.id})}}\" class=\"btn btn-primary\">{{information.categorie.libelle}}</a>
+              
             </div>
           </div>
         {% endfor %}
     </div>
   </div>
 {% endblock %}
-", "accueil/index.html.twig", "C:\\Users\\marcr\\Desktop\\symfony\\Village\\templates\\accueil\\index.html.twig");
+", "accueil/index.html.twig", "C:\\Users\\marcr\\Desktop\\symfony\\village\\templates\\accueil\\index.html.twig");
     }
 }

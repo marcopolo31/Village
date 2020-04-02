@@ -24,10 +24,10 @@ class EventController extends AbstractController
     /**
      * @Route("/categories/{id}", name="afficher_categorie")
      */
-    public function afficherCategorie(Categorie $categorie)
+    public function afficherCategorie(Categorie $categories)
     {   
         return $this->render('event/afficher_cate.html.twig', [
-            'categorie' => $categorie,
+            'categories' => $categories,
         ]);
     }
 

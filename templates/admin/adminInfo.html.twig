@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Administration{% endblock %}
+
+{% block monTitre %}Liste des Evénements et des Actualités{% endblock %}
+
+{% block body %}
+
+<a class="btn btn-success" href="{{path('creationInfo')}}">Ajouter</a>
+<div class="row">
+    {% for information in informations %}
+    <div class="col-6">
+        <div class="row align-items-center">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{asset('images/information/' ~ information.image)}}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{information.titre}}</h5>
+                  <p class="card-text">{{ information.libelle }}</p>
+                  <div class="row no-gutters">
+                    <a href="{{path('admin_modif', {'id' : information.id})}}" class="col btn btn-primary">Modifier</a>
+                    <form action="{{path('supInfo', {'id' : information.id})}}" method="POST" class="col" onsubmit="return confirm('Voulez-vous vraiment supprimer ?');">
+                        <input type="hidden" name="_method" value="SUP">
+                        <input type="hidden" name="_token" value="{{csrf_token('SUP' ~ information.id)}}">
+                        <input type="submit" class="btn btn-danger w-100" value="supprimer">
+                    </form>
+                </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

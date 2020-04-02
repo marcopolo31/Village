@@ -18,4 +18,5 @@ class AccueilController extends AbstractController
             'informations' => $informations,
         ]);
     }
+    
 }

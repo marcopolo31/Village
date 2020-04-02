@@ -14,7 +14,9 @@
               <h5 class="card-title">{{information.titre}}</h5>
               <p class="card-text">{{information.libelle}}</p>
               <p class="card-text">{{information.date}}</p>
-              <a href="#" class="btn btn-primary">{{information.categorie.libelle}}</a>
+              
+              <a href="{{path('afficher_categorie', {'id' : information.id})}}" class="btn btn-primary">{{information.categorie.libelle}}</a>
+              
             </div>
           </div>
         {% endfor %}

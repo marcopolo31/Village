@@ -2,13 +2,13 @@
 
 {% block title %}Categorie{% endblock %}
 
-{% block monTitre %}{{categorie.libelle}}{% endblock %}
+{% block monTitre %}{{categories.libelle}}{% endblock %}
 
 {% block body %}
 
-<div>{{categorie.libelle}}</div>
+<div>{{categories.libelle}}</div>
 <div class="row">
-    {% for information in categorie.information %}
+    {% for information in categories.information %}
     <div class="col-6">
         <div class="row align-items-center">
             <div class="card" style="width: 18rem;">

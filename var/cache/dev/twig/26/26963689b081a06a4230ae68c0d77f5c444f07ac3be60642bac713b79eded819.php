@@ -85,7 +85,7 @@ class __TwigTemplate_67cda69ad1c8a39b6c06b815dbd3bb29d1e73452b573fda9f69e077f145
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "monTitre"));
 
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["categorie"]) || array_key_exists("categorie", $context) ? $context["categorie"] : (function () { throw new RuntimeError('Variable "categorie" does not exist.', 5, $this->source); })()), "libelle", [], "any", false, false, false, 5), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 5, $this->source); })()), "libelle", [], "any", false, false, false, 5), "html", null, true);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -108,13 +108,13 @@ class __TwigTemplate_67cda69ad1c8a39b6c06b815dbd3bb29d1e73452b573fda9f69e077f145
         echo "
 <div>";
         // line 9
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["categorie"]) || array_key_exists("categorie", $context) ? $context["categorie"] : (function () { throw new RuntimeError('Variable "categorie" does not exist.', 9, $this->source); })()), "libelle", [], "any", false, false, false, 9), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 9, $this->source); })()), "libelle", [], "any", false, false, false, 9), "html", null, true);
         echo "</div>
 <div class=\"row\">
     ";
         // line 11
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["categorie"]) || array_key_exists("categorie", $context) ? $context["categorie"] : (function () { throw new RuntimeError('Variable "categorie" does not exist.', 11, $this->source); })()), "information", [], "any", false, false, false, 11));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 11, $this->source); })()), "information", [], "any", false, false, false, 11));
         foreach ($context['_seq'] as $context["_key"] => $context["information"]) {
             // line 12
             echo "    <div class=\"col-6\">
@@ -181,13 +181,13 @@ class __TwigTemplate_67cda69ad1c8a39b6c06b815dbd3bb29d1e73452b573fda9f69e077f145
 
 {% block title %}Categorie{% endblock %}
 
-{% block monTitre %}{{categorie.libelle}}{% endblock %}
+{% block monTitre %}{{categories.libelle}}{% endblock %}
 
 {% block body %}
 
-<div>{{categorie.libelle}}</div>
+<div>{{categories.libelle}}</div>
 <div class=\"row\">
-    {% for information in categorie.information %}
+    {% for information in categories.information %}
     <div class=\"col-6\">
         <div class=\"row align-items-center\">
             <div class=\"card\" style=\"width: 18rem;\">
@@ -203,6 +203,6 @@ class __TwigTemplate_67cda69ad1c8a39b6c06b815dbd3bb29d1e73452b573fda9f69e077f145
     {% endfor %}
 </div>
 
-{% endblock %}", "event/afficher_cate.html.twig", "C:\\Users\\marcr\\Desktop\\symfony\\Village\\templates\\event\\afficher_cate.html.twig");
+{% endblock %}", "event/afficher_cate.html.twig", "C:\\Users\\marcr\\Desktop\\symfony\\village\\templates\\event\\afficher_cate.html.twig");
     }
 }
