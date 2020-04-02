@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Information{% endblock %}
+
+{% block monTitre %}{{information.titre}}{% endblock %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-6">
+        <div class="row align-items-center">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{asset('images/information/' ~ information.image)}}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title"><a href="{{path('afficher_categorie', {'id' : information.id})}}">{{information.titre}}</a></h5>
+                  <p class="card-text">{{ information.libelle }}</p>
+                  <a href="#" class="btn btn-primary">{{information.categorie.libelle}}</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
