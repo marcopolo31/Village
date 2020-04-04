@@ -6,6 +6,7 @@ use App\Entity\Information;
 use App\Form\InformationType;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\InformationRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -15,9 +16,14 @@ class AdminController extends AbstractController
     /**
      * @Route("/admin", name="admin")
      */
-    public function adminInfo(InformationRepository $repository)
+    public function adminInfo(InformationRepository $repository, PaginatorInterface $paginatorInterface, Request $request)
     {
-        $informations = $repository->findAll();
+        $information = new Information();
+        $informations = $paginatorInterface->paginate(
+            $repository->findAllWithPagination($information),
+            $request->query->getInt('page', 1), /*page number*/
+            6 /*limit per page*/
+        );
         return $this->render('admin/adminInfo.html.twig', [
             'informations' => $informations,
         ]);

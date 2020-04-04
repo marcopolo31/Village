@@ -20,7 +20,10 @@ return [
     'creationInfo' => [[], ['_controller' => 'App\\Controller\\AdminController::adminModif'], [], [['text', '/admin/creation']], [], []],
     'admin_modif' => [['id'], ['_controller' => 'App\\Controller\\AdminController::adminModif'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/info']], [], []],
     'supInfo' => [['id'], ['_controller' => 'App\\Controller\\AdminController::suppression'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin']], [], []],
-    'categories' => [[], ['_controller' => 'App\\Controller\\EventController::categorie'], [], [['text', '/categories']], [], []],
+    'inscription' => [[], ['_controller' => 'App\\Controller\\AdminLogController::index'], [], [['text', '/inscription']], [], []],
+    'login' => [[], ['_controller' => 'App\\Controller\\AdminLogController::login'], [], [['text', '/login']], [], []],
+    'logout' => [[], ['_controller' => 'App\\Controller\\AdminLogController::logout'], [], [['text', '/logout']], [], []],
+    'contact' => [[], ['_controller' => 'App\\Controller\\ContactController::index'], [], [['text', '/contact']], [], []],
     'afficher_categorie' => [['id'], ['_controller' => 'App\\Controller\\EventController::afficherCategorie'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/categories']], [], []],
     'afficher_info' => [['id'], ['_controller' => 'App\\Controller\\EventController::eventActu'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/categories/info']], [], []],
 ];

@@ -2,9 +2,10 @@
 
 namespace App\Repository;
 
+use Doctrine\ORM\Query;
 use App\Entity\Information;
-use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 /**
  * @method Information|null find($id, $lockMode = null, $lockVersion = null)
@@ -17,6 +18,11 @@ class InformationRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Information::class);
+    }
+
+    public function findAllWithPagination() : Query{
+        return $this->createQueryBuilder('v')
+            ->getQuery();
     }
 
     // /**

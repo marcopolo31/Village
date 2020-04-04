@@ -66,7 +66,7 @@ class __TwigTemplate_4c076ecb9b414b5a7799f915572d72f578da328af88553538efd1211b71
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Categorie";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 3, $this->source); })()), "libelle", [], "any", false, false, false, 3), "html", null, true);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -179,7 +179,7 @@ class __TwigTemplate_4c076ecb9b414b5a7799f915572d72f578da328af88553538efd1211b71
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Categorie{% endblock %}
+{% block title %}{{categories.libelle}}{% endblock %}
 
 {% block monTitre %}{{categories.libelle}}{% endblock %}
 

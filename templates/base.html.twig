@@ -19,27 +19,43 @@
                 <li class="nav-item active">
                   <a class="nav-link" href="{{path('accueil')}}">Accueil</a>
                 </li>
+
+                {% if not app.user %}
                 <li class="nav-item active">
                   <a class="nav-link" href="{{path('afficher_categorie', {id : 1})}}">Evenements</a>
                 </li>
                 <li class="nav-item active">
                   <a class="nav-link" href="{{path('afficher_categorie', {id : 2})}}">Actualités</a>
                 </li>
+                {% else %}
                 <li class="nav-item active">
-                  <a class="nav-link" href="{{path('admin')}}">Administration</a>
+                  <a class="nav-link" href="{{path('admin')}}">Admin</a>
                 </li>
+                {% endif %}
+
                 <li class="nav-item active">
                   <a class="nav-link" href="#">Histoire</a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link " href="#">Contact</a>
+                  <a class="nav-link " href="{{path('contact')}}">Contact</a>
                 </li>
+
+                {% if not app.user %}
                 <li class="nav-item active">
-                    <a class="nav-link " href="#">Login</a>
+                    <a class="nav-link " href="{{path('login')}}">Login</a>
                   </li>
+                  {% else %}
                   <li class="nav-item active">
-                    <a class="nav-link " href="#">Déconnexion</a>
+                    <a class="nav-link " href="{{path('logout')}}">Déconnexion</a>
                   </li>
+                  {% endif %}
+
+                  {% if is_granted('ROLE_ADMIN') %}
+                  <li class="nav-item active">
+                    <a class="nav-link " href="{{path('inscription')}}">inscription</a>
+                  </li>
+                  {% endif %}
+
               </ul>
             </div>
           </nav>

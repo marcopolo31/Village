@@ -10,16 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class EventController extends AbstractController
 {
-    /**
-     * @Route("/categories", name="categories")
-     */
-    public function categorie(CategorieRepository $repository)
-    {   
-        $categories = $repository->findAll();
-        return $this->render('event/categorie.html.twig', [
-            'categories' => $categories,
-        ]);
-    }
+    
 
     /**
      * @Route("/categories/{id}", name="afficher_categorie")

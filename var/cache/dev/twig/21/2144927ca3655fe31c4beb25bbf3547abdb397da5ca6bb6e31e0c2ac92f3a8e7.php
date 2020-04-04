@@ -75,50 +75,97 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil");
         echo "\">Accueil</a>
                 </li>
-                <li class=\"nav-item active\">
-                  <a class=\"nav-link\" href=\"";
+
+                ";
         // line 23
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("afficher_categorie", ["id" => 1]);
-        echo "\">Evenements</a>
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", [], "any", false, false, false, 23)) {
+            // line 24
+            echo "                <li class=\"nav-item active\">
+                  <a class=\"nav-link\" href=\"";
+            // line 25
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("afficher_categorie", ["id" => 1]);
+            echo "\">Evenements</a>
                 </li>
                 <li class=\"nav-item active\">
                   <a class=\"nav-link\" href=\"";
-        // line 26
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("afficher_categorie", ["id" => 2]);
-        echo "\">Actualités</a>
+            // line 28
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("afficher_categorie", ["id" => 2]);
+            echo "\">Actualités</a>
                 </li>
-                <li class=\"nav-item active\">
+                ";
+        } else {
+            // line 31
+            echo "                <li class=\"nav-item active\">
                   <a class=\"nav-link\" href=\"";
-        // line 29
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
-        echo "\">Administration</a>
+            // line 32
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
+            echo "\">Admin</a>
                 </li>
+                ";
+        }
+        // line 35
+        echo "
                 <li class=\"nav-item active\">
                   <a class=\"nav-link\" href=\"#\">Histoire</a>
                 </li>
                 <li class=\"nav-item active\">
-                  <a class=\"nav-link \" href=\"#\">Contact</a>
+                  <a class=\"nav-link \" href=\"";
+        // line 40
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
+        echo "\">Contact</a>
                 </li>
-                <li class=\"nav-item active\">
-                    <a class=\"nav-link \" href=\"#\">Login</a>
+
+                ";
+        // line 43
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 43, $this->source); })()), "user", [], "any", false, false, false, 43)) {
+            // line 44
+            echo "                <li class=\"nav-item active\">
+                    <a class=\"nav-link \" href=\"";
+            // line 45
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
+            echo "\">Login</a>
                   </li>
-                  <li class=\"nav-item active\">
-                    <a class=\"nav-link \" href=\"#\">Déconnexion</a>
+                  ";
+        } else {
+            // line 48
+            echo "                  <li class=\"nav-item active\">
+                    <a class=\"nav-link \" href=\"";
+            // line 49
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
+            echo "\">Déconnexion</a>
                   </li>
+                  ";
+        }
+        // line 52
+        echo "
+                  ";
+        // line 53
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
+            // line 54
+            echo "                  <li class=\"nav-item active\">
+                    <a class=\"nav-link \" href=\"";
+            // line 55
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inscription");
+            echo "\">inscription</a>
+                  </li>
+                  ";
+        }
+        // line 58
+        echo "
               </ul>
             </div>
           </nav>
           <h1 class=\"border border-dark rounded p-2 m-2 text-white bg-primary\">";
-        // line 46
+        // line 62
         $this->displayBlock('monTitre', $context, $blocks);
         echo "</h1>
         ";
-        // line 47
+        // line 63
         $this->displayBlock('body', $context, $blocks);
-        // line 48
+        // line 64
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 49
+        // line 65
         echo "        <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
 <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
 <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
@@ -170,7 +217,7 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
 
     }
 
-    // line 46
+    // line 62
     public function block_monTitre($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -188,7 +235,7 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
 
     }
 
-    // line 47
+    // line 63
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -206,7 +253,7 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
 
     }
 
-    // line 48
+    // line 64
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -236,7 +283,7 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
 
     public function getDebugInfo()
     {
-        return array (  210 => 48,  192 => 47,  174 => 46,  156 => 9,  137 => 5,  122 => 49,  119 => 48,  117 => 47,  113 => 46,  93 => 29,  87 => 26,  81 => 23,  75 => 20,  63 => 10,  61 => 9,  54 => 5,  48 => 1,);
+        return array (  257 => 64,  239 => 63,  221 => 62,  203 => 9,  184 => 5,  169 => 65,  166 => 64,  164 => 63,  160 => 62,  154 => 58,  148 => 55,  145 => 54,  143 => 53,  140 => 52,  134 => 49,  131 => 48,  125 => 45,  122 => 44,  120 => 43,  114 => 40,  107 => 35,  101 => 32,  98 => 31,  92 => 28,  86 => 25,  83 => 24,  81 => 23,  75 => 20,  63 => 10,  61 => 9,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -262,27 +309,43 @@ class __TwigTemplate_1f603ca237ebd80470edc22c2424153fc129532b47ebfd611bdf12a80a9
                 <li class=\"nav-item active\">
                   <a class=\"nav-link\" href=\"{{path('accueil')}}\">Accueil</a>
                 </li>
+
+                {% if not app.user %}
                 <li class=\"nav-item active\">
                   <a class=\"nav-link\" href=\"{{path('afficher_categorie', {id : 1})}}\">Evenements</a>
                 </li>
                 <li class=\"nav-item active\">
                   <a class=\"nav-link\" href=\"{{path('afficher_categorie', {id : 2})}}\">Actualités</a>
                 </li>
+                {% else %}
                 <li class=\"nav-item active\">
-                  <a class=\"nav-link\" href=\"{{path('admin')}}\">Administration</a>
+                  <a class=\"nav-link\" href=\"{{path('admin')}}\">Admin</a>
                 </li>
+                {% endif %}
+
                 <li class=\"nav-item active\">
                   <a class=\"nav-link\" href=\"#\">Histoire</a>
                 </li>
                 <li class=\"nav-item active\">
-                  <a class=\"nav-link \" href=\"#\">Contact</a>
+                  <a class=\"nav-link \" href=\"{{path('contact')}}\">Contact</a>
                 </li>
+
+                {% if not app.user %}
                 <li class=\"nav-item active\">
-                    <a class=\"nav-link \" href=\"#\">Login</a>
+                    <a class=\"nav-link \" href=\"{{path('login')}}\">Login</a>
                   </li>
+                  {% else %}
                   <li class=\"nav-item active\">
-                    <a class=\"nav-link \" href=\"#\">Déconnexion</a>
+                    <a class=\"nav-link \" href=\"{{path('logout')}}\">Déconnexion</a>
                   </li>
+                  {% endif %}
+
+                  {% if is_granted('ROLE_ADMIN') %}
+                  <li class=\"nav-item active\">
+                    <a class=\"nav-link \" href=\"{{path('inscription')}}\">inscription</a>
+                  </li>
+                  {% endif %}
+
               </ul>
             </div>
           </nav>

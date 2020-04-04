@@ -16,7 +16,10 @@ return [
         '/' => [[['_route' => 'accueil', '_controller' => 'App\\Controller\\AccueilController::index'], null, null, null, false, false, null]],
         '/admin' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\AdminController::adminInfo'], null, null, null, false, false, null]],
         '/admin/creation' => [[['_route' => 'creationInfo', '_controller' => 'App\\Controller\\AdminController::adminModif'], null, null, null, false, false, null]],
-        '/categories' => [[['_route' => 'categories', '_controller' => 'App\\Controller\\EventController::categorie'], null, null, null, false, false, null]],
+        '/inscription' => [[['_route' => 'inscription', '_controller' => 'App\\Controller\\AdminLogController::index'], null, null, null, false, false, null]],
+        '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\AdminLogController::login'], null, null, null, false, false, null]],
+        '/logout' => [[['_route' => 'logout', '_controller' => 'App\\Controller\\AdminLogController::logout'], null, null, null, false, false, null]],
+        '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\ContactController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

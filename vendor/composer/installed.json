@@ -1,5 +1,199 @@
 [
     {
+        "name": "algolia/algoliasearch-client-php",
+        "version": "2.6.0",
+        "version_normalized": "2.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/algolia/algoliasearch-client-php.git",
+            "reference": "cf00bbc55e0701691abbd92101c963e34ec4a496"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/algolia/algoliasearch-client-php/zipball/cf00bbc55e0701691abbd92101c963e34ec4a496",
+            "reference": "cf00bbc55e0701691abbd92101c963e34ec4a496",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "ext-json": "*",
+            "ext-mbstring": "*",
+            "php": "^5.3 || ^7.0",
+            "psr/http-message": "^1.0",
+            "psr/log": "^1.0",
+            "psr/simple-cache": "^1.0"
+        },
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "^2.0",
+            "fzaninotto/faker": "^1.8",
+            "phpunit/phpunit": "^4.8",
+            "symfony/yaml": "^2.0 || ^4.0"
+        },
+        "suggest": {
+            "guzzlehttp/guzzle": "If you prefer to use Guzzle HTTP client instead of the Http Client implementation provided by the package"
+        },
+        "time": "2020-03-09T09:11:44+00:00",
+        "bin": [
+            "bin/algolia-doctor"
+        ],
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-2.0": "2.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Algolia\\AlgoliaSearch\\": "src/"
+            },
+            "files": [
+                "src/Http/Psr7/functions.php",
+                "src/functions.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Algolia Team",
+                "email": "contact@algolia.com"
+            }
+        ],
+        "description": "Algolia Search API Client for PHP",
+        "keywords": [
+            "algolia",
+            "api",
+            "client",
+            "php",
+            "search"
+        ]
+    },
+    {
+        "name": "algolia/search-bundle",
+        "version": "4.1.0",
+        "version_normalized": "4.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/algolia/search-bundle.git",
+            "reference": "6714243a8eb87153b68a4efdb94c7d7349f60eda"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/algolia/search-bundle/zipball/6714243a8eb87153b68a4efdb94c7d7349f60eda",
+            "reference": "6714243a8eb87153b68a4efdb94c7d7349f60eda",
+            "shasum": ""
+        },
+        "require": {
+            "algolia/algoliasearch-client-php": "^2.5",
+            "doctrine/common": "^2.5",
+            "php": "^5.6 || ^7.0",
+            "symfony/filesystem": "^3.4 || ^4.0 || ^5.0",
+            "symfony/property-access": "^3.4 || ^4.0 || ^5.0",
+            "symfony/serializer": "^3.4 || ^4.0 || ^5.0"
+        },
+        "conflict": {
+            "doctrine/mongodb-odm": "< 1.3"
+        },
+        "require-dev": {
+            "doctrine/doctrine-bundle": "^1.8 || ^2.0",
+            "doctrine/orm": "^2.5",
+            "friendsofphp/php-cs-fixer": "^2.15",
+            "jms/serializer-bundle": "^2.3 || ^3.0",
+            "ocramius/proxy-manager": "*",
+            "phpunit/phpunit": "^5.7.21 || ^6.4 || ^7.0",
+            "roave/security-advisories": "dev-master",
+            "symfony/doctrine-bridge": "^3.4 || ^4.0 || ^5.0",
+            "symfony/framework-bundle": "^3.4 || ^4.0 || ^5.0",
+            "symfony/phpunit-bridge": "^3.4 || ^4.0 || ^5.0",
+            "symfony/proxy-manager-bridge": "*",
+            "symfony/yaml": "^3.4 || ^4.0 || ^5.0"
+        },
+        "time": "2020-01-23T15:46:38+00:00",
+        "type": "symfony-bundle",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "5.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Algolia\\SearchBundle\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Algolia",
+                "email": "support@algolia.com"
+            }
+        ]
+    },
+    {
+        "name": "composer/ca-bundle",
+        "version": "1.2.6",
+        "version_normalized": "1.2.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/composer/ca-bundle.git",
+            "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/composer/ca-bundle/zipball/47fe531de31fca4a1b997f87308e7d7804348f7e",
+            "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e",
+            "shasum": ""
+        },
+        "require": {
+            "ext-openssl": "*",
+            "ext-pcre": "*",
+            "php": "^5.3.2 || ^7.0 || ^8.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.8.35 || ^5.7 || 6.5 - 8",
+            "psr/log": "^1.0",
+            "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0"
+        },
+        "time": "2020-01-13T10:02:55+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Composer\\CaBundle\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jordi Boggiano",
+                "email": "j.boggiano@seld.be",
+                "homepage": "http://seld.be"
+            }
+        ],
+        "description": "Lets you find a path to the system CA bundle, and includes a fallback to the Mozilla CA bundle.",
+        "keywords": [
+            "cabundle",
+            "cacert",
+            "certificate",
+            "ssl",
+            "tls"
+        ]
+    },
+    {
         "name": "doctrine/annotations",
         "version": "v1.8.0",
         "version_normalized": "1.8.0.0",
@@ -1448,6 +1642,108 @@
         ]
     },
     {
+        "name": "geoip2/geoip2",
+        "version": "v2.10.0",
+        "version_normalized": "2.10.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/maxmind/GeoIP2-php.git",
+            "reference": "419557cd21d9fe039721a83490701a58c8ce784a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/maxmind/GeoIP2-php/zipball/419557cd21d9fe039721a83490701a58c8ce784a",
+            "reference": "419557cd21d9fe039721a83490701a58c8ce784a",
+            "shasum": ""
+        },
+        "require": {
+            "ext-json": "*",
+            "maxmind-db/reader": "~1.5",
+            "maxmind/web-service-common": "~0.6",
+            "php": ">=5.6"
+        },
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "2.*",
+            "phpunit/phpunit": "5.*",
+            "squizlabs/php_codesniffer": "3.*"
+        },
+        "time": "2019-12-12T18:48:39+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GeoIp2\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Gregory J. Oschwald",
+                "email": "goschwald@maxmind.com",
+                "homepage": "https://www.maxmind.com/"
+            }
+        ],
+        "description": "MaxMind GeoIP2 PHP API",
+        "homepage": "https://github.com/maxmind/GeoIP2-php",
+        "keywords": [
+            "IP",
+            "geoip",
+            "geoip2",
+            "geolocation",
+            "maxmind"
+        ]
+    },
+    {
+        "name": "gpslab/geoip2",
+        "version": "v2.0.4",
+        "version_normalized": "2.0.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/gpslab/geoip2.git",
+            "reference": "3c9ba805f2af46de844a84099fefe44b49f37a72"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/gpslab/geoip2/zipball/3c9ba805f2af46de844a84099fefe44b49f37a72",
+            "reference": "3c9ba805f2af46de844a84099fefe44b49f37a72",
+            "shasum": ""
+        },
+        "require": {
+            "ext-phar": "*",
+            "ext-zlib": "*",
+            "geoip2/geoip2": "~2.0",
+            "php": ">=7.1.0",
+            "symfony/config": "~2.3|~3.0|~4.0|~5.0",
+            "symfony/console": "~2.3|~3.0|~4.0|~5.0",
+            "symfony/dependency-injection": "~2.3|~3.0|~4.0|~5.0",
+            "symfony/expression-language": "~2.3|~3.0|~4.0|~5.0",
+            "symfony/filesystem": "~2.3|~3.0|~4.0|~5.0",
+            "symfony/http-kernel": "~2.3|~3.0|~4.0|~5.0"
+        },
+        "require-dev": {
+            "phpstan/phpstan": "^0.12",
+            "phpstan/phpstan-phpunit": "^0.12",
+            "phpunit/phpunit": "~7.0|~8.0"
+        },
+        "time": "2020-03-26T06:37:07+00:00",
+        "type": "symfony-bundle",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GpsLab\\Bundle\\GeoIP2Bundle\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "A Symfony Bundle for the Maxmind GeoIP2 API",
+        "homepage": "https://github.com/gpslab/geoip2"
+    },
+    {
         "name": "jdorn/sql-formatter",
         "version": "v1.2.17",
         "version_normalized": "1.2.17.0",
@@ -1556,6 +1852,154 @@
             "metadata",
             "xml",
             "yaml"
+        ]
+    },
+    {
+        "name": "knplabs/knp-components",
+        "version": "v2.3.3",
+        "version_normalized": "2.3.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/KnpLabs/knp-components.git",
+            "reference": "5a89e60dfe93179f329e35f92ed9348d52143f7b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/KnpLabs/knp-components/zipball/5a89e60dfe93179f329e35f92ed9348d52143f7b",
+            "reference": "5a89e60dfe93179f329e35f92ed9348d52143f7b",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.2",
+            "symfony/event-dispatcher": "^3.4 || ^4.0 || ^5.0",
+            "symfony/http-foundation": "^3.4 || ^4.0 || ^5.0"
+        },
+        "require-dev": {
+            "doctrine/mongodb-odm": "^2.0",
+            "doctrine/orm": "^2.5",
+            "doctrine/phpcr-odm": "^1.2",
+            "jackalope/jackalope-doctrine-dbal": "^1.2",
+            "phpunit/phpunit": "^8.0",
+            "ruflin/elastica": "^1.0",
+            "symfony/http-kernel": "^3.4 || ^4.0 || ^5.0",
+            "symfony/property-access": "^3.4 || ^4.0 || ^5.0"
+        },
+        "suggest": {
+            "doctrine/common": "to allow usage pagination with Doctrine ArrayCollection",
+            "doctrine/mongodb-odm": "to allow usage pagination with Doctrine ODM MongoDB",
+            "doctrine/orm": "to allow usage pagination with Doctrine ORM",
+            "doctrine/phpcr-odm": "to allow usage pagination with Doctrine ODM PHPCR",
+            "propel/propel1": "to allow usage pagination with Propel ORM",
+            "ruflin/elastica": "to allow usage pagination with ElasticSearch Client",
+            "solarium/solarium": "to allow usage pagination with Solarium Client",
+            "symfony/property-access": "To allow sorting arrays"
+        },
+        "time": "2020-02-24T15:11:24+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.4.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Knp\\Component\\": "src/Knp/Component"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "KnpLabs Team",
+                "homepage": "https://knplabs.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://github.com/KnpLabs/knp-components/contributors"
+            }
+        ],
+        "description": "Knplabs component library",
+        "homepage": "http://github.com/KnpLabs/knp-components",
+        "keywords": [
+            "components",
+            "knp",
+            "knplabs",
+            "pager",
+            "paginator"
+        ]
+    },
+    {
+        "name": "knplabs/knp-paginator-bundle",
+        "version": "v5.1.1",
+        "version_normalized": "5.1.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/KnpLabs/KnpPaginatorBundle.git",
+            "reference": "086da9cd27262ba45bcaca3a6777e97068fce8de"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/KnpLabs/KnpPaginatorBundle/zipball/086da9cd27262ba45bcaca3a6777e97068fce8de",
+            "reference": "086da9cd27262ba45bcaca3a6777e97068fce8de",
+            "shasum": ""
+        },
+        "require": {
+            "knplabs/knp-components": "^2.0",
+            "php": "^7.2",
+            "symfony/config": "^4.3 || ^5.0",
+            "symfony/dependency-injection": "^4.3 || ^5.0",
+            "symfony/event-dispatcher": "^4.3 || ^5.0",
+            "symfony/http-foundation": "^4.3 || ^5.0",
+            "symfony/http-kernel": "^4.3 || ^5.0",
+            "symfony/routing": "^4.3 || ^5.0",
+            "symfony/translation": "^4.3 || ^5.0",
+            "twig/twig": "^2.0 || ^3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^7.5 || ^8.5",
+            "symfony/expression-language": "^4.3 || ^5.0",
+            "symfony/templating": "^4.3 || ^5.0"
+        },
+        "time": "2020-01-21T17:00:39+00:00",
+        "type": "symfony-bundle",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "5.1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Knp\\Bundle\\PaginatorBundle\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "KnpLabs Team",
+                "homepage": "http://knplabs.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "http://github.com/KnpLabs/KnpPaginatorBundle/contributors"
+            }
+        ],
+        "description": "Paginator bundle for Symfony to automate pagination and simplify sorting and other features",
+        "homepage": "http://github.com/KnpLabs/KnpPaginatorBundle",
+        "keywords": [
+            "bundle",
+            "knp",
+            "knplabs",
+            "pager",
+            "pagination",
+            "paginator",
+            "symfony"
         ]
     },
     {
@@ -1734,6 +2178,116 @@
             "laminas",
             "zf"
         ]
+    },
+    {
+        "name": "maxmind-db/reader",
+        "version": "v1.6.0",
+        "version_normalized": "1.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/maxmind/MaxMind-DB-Reader-php.git",
+            "reference": "febd4920bf17c1da84cef58e56a8227dfb37fbe4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/maxmind/MaxMind-DB-Reader-php/zipball/febd4920bf17c1da84cef58e56a8227dfb37fbe4",
+            "reference": "febd4920bf17c1da84cef58e56a8227dfb37fbe4",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6"
+        },
+        "conflict": {
+            "ext-maxminddb": "<1.6.0,>=2.0.0"
+        },
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "2.*",
+            "php-coveralls/php-coveralls": "^2.1",
+            "phpunit/phpcov": "^3.0",
+            "phpunit/phpunit": "5.*",
+            "squizlabs/php_codesniffer": "3.*"
+        },
+        "suggest": {
+            "ext-bcmath": "bcmath or gmp is required for decoding larger integers with the pure PHP decoder",
+            "ext-gmp": "bcmath or gmp is required for decoding larger integers with the pure PHP decoder",
+            "ext-maxminddb": "A C-based database decoder that provides significantly faster lookups"
+        },
+        "time": "2019-12-19T22:59:03+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "MaxMind\\Db\\": "src/MaxMind/Db"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Gregory J. Oschwald",
+                "email": "goschwald@maxmind.com",
+                "homepage": "https://www.maxmind.com/"
+            }
+        ],
+        "description": "MaxMind DB Reader API",
+        "homepage": "https://github.com/maxmind/MaxMind-DB-Reader-php",
+        "keywords": [
+            "database",
+            "geoip",
+            "geoip2",
+            "geolocation",
+            "maxmind"
+        ]
+    },
+    {
+        "name": "maxmind/web-service-common",
+        "version": "v0.6.0",
+        "version_normalized": "0.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/maxmind/web-service-common-php.git",
+            "reference": "40c928bb0194c45088b369a17f9baef9c3fc7460"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/maxmind/web-service-common-php/zipball/40c928bb0194c45088b369a17f9baef9c3fc7460",
+            "reference": "40c928bb0194c45088b369a17f9baef9c3fc7460",
+            "shasum": ""
+        },
+        "require": {
+            "composer/ca-bundle": "^1.0.3",
+            "ext-curl": "*",
+            "ext-json": "*",
+            "php": ">=5.6"
+        },
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "2.*",
+            "phpunit/phpunit": "^4.8.36 || ^5.7 || ^6.5 || ^7.0",
+            "squizlabs/php_codesniffer": "3.*"
+        },
+        "time": "2019-12-12T15:56:05+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "MaxMind\\Exception\\": "src/Exception",
+                "MaxMind\\WebService\\": "src/WebService"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Gregory Oschwald",
+                "email": "goschwald@maxmind.com"
+            }
+        ],
+        "description": "Internal MaxMind Web Service API",
+        "homepage": "https://github.com/maxmind/web-service-common-php"
     },
     {
         "name": "monolog/monolog",
@@ -2266,6 +2820,58 @@
         ]
     },
     {
+        "name": "psr/http-message",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/http-message.git",
+            "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+            "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2016-08-06T14:39:51+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\Http\\Message\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common interface for HTTP messages",
+        "homepage": "https://github.com/php-fig/http-message",
+        "keywords": [
+            "http",
+            "http-message",
+            "psr",
+            "psr-7",
+            "request",
+            "response"
+        ]
+    },
+    {
         "name": "psr/link",
         "version": "1.0.0",
         "version_normalized": "1.0.0.0",
@@ -2363,6 +2969,56 @@
             "log",
             "psr",
             "psr-3"
+        ]
+    },
+    {
+        "name": "psr/simple-cache",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/simple-cache.git",
+            "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
+            "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2017-10-23T01:57:42+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\SimpleCache\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common interfaces for simple caching",
+        "keywords": [
+            "cache",
+            "caching",
+            "psr",
+            "psr-16",
+            "simple-cache"
         ]
     },
     {

@@ -17,6 +17,8 @@ class ComposerStaticInit591aaedc8e63043f67a3944dc27484f0
         '7e9bd612cc444b3eed788ebbe46263a0' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/autoload.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
+        '979dffec6fa5205cabd2c2cd1e9e6b3a' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Http/Psr7/functions.php',
+        '6783aef8c489bbc166eee2536fe605d5' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/functions.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
     );
 
@@ -109,8 +111,10 @@ class ComposerStaticInit591aaedc8e63043f67a3944dc27484f0
         ),
         'P' => 
         array (
+            'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
             'Psr\\Link\\' => 9,
+            'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
             'ProxyManager\\' => 13,
@@ -121,12 +125,25 @@ class ComposerStaticInit591aaedc8e63043f67a3944dc27484f0
         array (
             'Monolog\\' => 8,
             'Metadata\\' => 9,
+            'MaxMind\\WebService\\' => 19,
+            'MaxMind\\Exception\\' => 18,
+            'MaxMind\\Db\\' => 11,
         ),
         'L' => 
         array (
             'Laminas\\ZendFrameworkBridge\\' => 28,
             'Laminas\\EventManager\\' => 21,
             'Laminas\\Code\\' => 13,
+        ),
+        'K' => 
+        array (
+            'Knp\\Component\\' => 14,
+            'Knp\\Bundle\\PaginatorBundle\\' => 27,
+        ),
+        'G' => 
+        array (
+            'GpsLab\\Bundle\\GeoIP2Bundle\\' => 27,
+            'GeoIp2\\' => 7,
         ),
         'E' => 
         array (
@@ -151,10 +168,16 @@ class ComposerStaticInit591aaedc8e63043f67a3944dc27484f0
             'Doctrine\\Bundle\\FixturesBundle\\' => 31,
             'Doctrine\\Bundle\\DoctrineBundle\\' => 31,
         ),
+        'C' => 
+        array (
+            'Composer\\CaBundle\\' => 18,
+        ),
         'A' => 
         array (
             'App\\Tests\\' => 10,
             'App\\' => 4,
+            'Algolia\\SearchBundle\\' => 21,
+            'Algolia\\AlgoliaSearch\\' => 22,
         ),
     );
 
@@ -445,6 +468,10 @@ class ComposerStaticInit591aaedc8e63043f67a3944dc27484f0
         array (
             0 => __DIR__ . '/..' . '/sensio/framework-extra-bundle/src',
         ),
+        'Psr\\SimpleCache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/simple-cache/src',
+        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
@@ -452,6 +479,10 @@ class ComposerStaticInit591aaedc8e63043f67a3944dc27484f0
         'Psr\\Link\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/link/src',
+        ),
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Container\\' => 
         array (
@@ -481,6 +512,18 @@ class ComposerStaticInit591aaedc8e63043f67a3944dc27484f0
         array (
             0 => __DIR__ . '/..' . '/jms/metadata/src',
         ),
+        'MaxMind\\WebService\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/maxmind/web-service-common/src/WebService',
+        ),
+        'MaxMind\\Exception\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception',
+        ),
+        'MaxMind\\Db\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/maxmind-db/reader/src/MaxMind/Db',
+        ),
         'Laminas\\ZendFrameworkBridge\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src',
@@ -492,6 +535,22 @@ class ComposerStaticInit591aaedc8e63043f67a3944dc27484f0
         'Laminas\\Code\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-code/src',
+        ),
+        'Knp\\Component\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-components/src/Knp/Component',
+        ),
+        'Knp\\Bundle\\PaginatorBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-paginator-bundle/src',
+        ),
+        'GpsLab\\Bundle\\GeoIP2Bundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gpslab/geoip2/src',
+        ),
+        'GeoIp2\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/geoip2/geoip2/src',
         ),
         'Egulias\\EmailValidator\\' => 
         array (
@@ -564,6 +623,10 @@ class ComposerStaticInit591aaedc8e63043f67a3944dc27484f0
         array (
             0 => __DIR__ . '/..' . '/doctrine/doctrine-bundle',
         ),
+        'Composer\\CaBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/composer/ca-bundle/src',
+        ),
         'App\\Tests\\' => 
         array (
             0 => __DIR__ . '/../..' . '/tests',
@@ -571,6 +634,14 @@ class ComposerStaticInit591aaedc8e63043f67a3944dc27484f0
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Algolia\\SearchBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/algolia/search-bundle/src',
+        ),
+        'Algolia\\AlgoliaSearch\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src',
         ),
     );
 
