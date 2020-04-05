@@ -46,6 +46,10 @@ return [
                     .'|([^/]++)(*:240)'
                     .'|info/([^/]++)(*:261)'
                 .')'
+                .'|/media/cache/resolve/(?'
+                    .'|([A-z0-9_-]*)/rc/([^/]++)/(.+)(*:324)'
+                    .'|([A-z0-9_-]*)/(.+)(*:350)'
+                .')'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -59,8 +63,10 @@ return [
         192 => [[['_route' => 'admin_modif', '_controller' => 'App\\Controller\\AdminController::adminModif'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
         208 => [[['_route' => 'supInfo', '_controller' => 'App\\Controller\\AdminController::suppression'], ['id'], ['SUP' => 0], null, false, true, null]],
         240 => [[['_route' => 'afficher_categorie', '_controller' => 'App\\Controller\\EventController::afficherCategorie'], ['id'], null, null, false, true, null]],
-        261 => [
-            [['_route' => 'afficher_info', '_controller' => 'App\\Controller\\EventController::eventActu'], ['id'], null, null, false, true, null],
+        261 => [[['_route' => 'afficher_info', '_controller' => 'App\\Controller\\EventController::eventActu'], ['id'], null, null, false, true, null]],
+        324 => [[['_route' => 'liip_imagine_filter_runtime', '_controller' => 'Liip\\ImagineBundle\\Controller\\ImagineController::filterRuntimeAction'], ['filter', 'hash', 'path'], ['GET' => 0], null, false, true, null]],
+        350 => [
+            [['_route' => 'liip_imagine_filter', '_controller' => 'Liip\\ImagineBundle\\Controller\\ImagineController::filterAction'], ['filter', 'path'], ['GET' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

@@ -9,7 +9,7 @@
     <div class="row">
         {% for information in informations %}
         <div class="card ml-5 mb-5" style="width: 450px; height: 650px;">
-            <img class="card-img-top" src="{{asset('images/information/' ~ information.image)}}" alt="Card image cap">
+            <img class="card-img-top" src="{{vich_uploader_asset(information,'imageFile')|imagine_filter('thumb')}}" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">{{information.titre}}</h5>
               <p class="card-text">{{information.libelle}}</p>

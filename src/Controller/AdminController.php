@@ -7,9 +7,12 @@ use App\Form\InformationType;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\InformationRepository;
 use Knp\Component\Pager\PaginatorInterface;
+use Liip\ImagineBundle\Imagine\Cache\CacheManager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Vich\UploaderBundle\Templating\Helper\UploaderHelper;
 
 class AdminController extends AbstractController
 {
@@ -33,7 +36,7 @@ class AdminController extends AbstractController
      * @Route("/admin/creation", name="creationInfo")
      * @Route("/admin/info/{id}", name="admin_modif", methods="GET|POST")
      */
-    public function adminModif(Information $information = null, Request $request, EntityManagerInterface $entityManager)
+    public function adminModif(Information $information = null, Request $request, EntityManagerInterface $entityManager,CacheManager $cacheManager, UploaderHelper $uploaderHelper)
     {   
         if(!$information)
         {
@@ -45,6 +48,10 @@ class AdminController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid())
         {
+
+        if($information->getImageFile()instanceof UploadedFile){
+            $cacheManager->remove($uploaderHelper->asset($information, 'imageFile') );
+        }
             $entityManager->persist($information);
             $entityManager->flush();
             $this->addFlash('success', "L'action a été effectué");

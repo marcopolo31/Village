@@ -43,6 +43,7 @@ class ComposerStaticInit591aaedc8e63043f67a3944dc27484f0
         ),
         'S' => 
         array (
+            'Symfony\\WebpackEncoreBundle\\' => 28,
             'Symfony\\Polyfill\\Php73\\' => 23,
             'Symfony\\Polyfill\\Php72\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
@@ -61,6 +62,7 @@ class ComposerStaticInit591aaedc8e63043f67a3944dc27484f0
             'Symfony\\Component\\VarDumper\\' => 28,
             'Symfony\\Component\\Validator\\' => 28,
             'Symfony\\Component\\Translation\\' => 30,
+            'Symfony\\Component\\Templating\\' => 29,
             'Symfony\\Component\\String\\' => 25,
             'Symfony\\Component\\Stopwatch\\' => 28,
             'Symfony\\Component\\Serializer\\' => 29,
@@ -131,6 +133,7 @@ class ComposerStaticInit591aaedc8e63043f67a3944dc27484f0
         ),
         'L' => 
         array (
+            'Liip\\ImagineBundle\\' => 19,
             'Laminas\\ZendFrameworkBridge\\' => 28,
             'Laminas\\EventManager\\' => 21,
             'Laminas\\Code\\' => 13,
@@ -139,6 +142,10 @@ class ComposerStaticInit591aaedc8e63043f67a3944dc27484f0
         array (
             'Knp\\Component\\' => 14,
             'Knp\\Bundle\\PaginatorBundle\\' => 27,
+        ),
+        'I' => 
+        array (
+            'Imagine\\' => 8,
         ),
         'G' => 
         array (
@@ -207,6 +214,10 @@ class ComposerStaticInit591aaedc8e63043f67a3944dc27484f0
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
+        'Symfony\\WebpackEncoreBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src',
         ),
         'Symfony\\Polyfill\\Php73\\' => 
         array (
@@ -279,6 +290,10 @@ class ComposerStaticInit591aaedc8e63043f67a3944dc27484f0
         'Symfony\\Component\\Translation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
+        ),
+        'Symfony\\Component\\Templating\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/templating',
         ),
         'Symfony\\Component\\String\\' => 
         array (
@@ -524,6 +539,10 @@ class ComposerStaticInit591aaedc8e63043f67a3944dc27484f0
         array (
             0 => __DIR__ . '/..' . '/maxmind-db/reader/src/MaxMind/Db',
         ),
+        'Liip\\ImagineBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/liip/imagine-bundle',
+        ),
         'Laminas\\ZendFrameworkBridge\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src',
@@ -543,6 +562,10 @@ class ComposerStaticInit591aaedc8e63043f67a3944dc27484f0
         'Knp\\Bundle\\PaginatorBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/knplabs/knp-paginator-bundle/src',
+        ),
+        'Imagine\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/imagine/imagine/src',
         ),
         'GpsLab\\Bundle\\GeoIP2Bundle\\' => 
         array (
