@@ -1,5 +1,7 @@
-import Places from 'places.js'
 
+import Map from './modules/maps'
+
+Map.init()
 
 /*
  * Welcome to your app's main JavaScript file!
@@ -9,7 +11,7 @@ import Places from 'places.js'
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
-import '../css/app.css';
+require('../css/app.css');
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
 // import $ from 'jquery';
