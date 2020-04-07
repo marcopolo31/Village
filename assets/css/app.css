@@ -1,4 +1,46 @@
 body {
     background-color: lightblue;
     
+    
 }
+
+#weathers{
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    margin-bottom: 50px;
+    
+}
+
+i.wi{
+    margin-top: 50px;
+    font-size: 150px;
+}
+
+.card{
+    height: auto;
+    width: 300px;
+}
+
+.imgHisto{
+    float: left;
+    width: auto;
+}
+
+.imgHisto1{
+    float: right;
+    height: 200px;
+    width: auto;
+
+}
+
+.carousel .item {
+    max-height: 500px;
+  }
+

@@ -1,7 +1,9 @@
-
+import Weather from './modules/weather'
 import Map from './modules/maps'
 
 Map.init()
+
+Weather.init()
 
 /*
  * Welcome to your app's main JavaScript file!
@@ -15,5 +17,6 @@ require('../css/app.css');
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
 // import $ from 'jquery';
+var $ = require('jquery');
 
 console.log('Hello Webpack Encore! Edit me in assets/js/app.js');

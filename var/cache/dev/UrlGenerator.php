@@ -26,6 +26,7 @@ return [
     'contact' => [[], ['_controller' => 'App\\Controller\\ContactController::index'], [], [['text', '/contact']], [], []],
     'afficher_categorie' => [['id'], ['_controller' => 'App\\Controller\\EventController::afficherCategorie'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/categories']], [], []],
     'afficher_info' => [['id'], ['_controller' => 'App\\Controller\\EventController::eventActu'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/categories/info']], [], []],
+    'histoire' => [[], ['_controller' => 'App\\Controller\\HistoireController::index'], [], [['text', '/histoire']], [], []],
     'liip_imagine_filter_runtime' => [['filter', 'hash', 'path'], ['_controller' => 'Liip\\ImagineBundle\\Controller\\ImagineController::filterRuntimeAction'], ['filter' => '[A-z0-9_-]*', 'path' => '.+'], [['variable', '/', '.+', 'path'], ['variable', '/', '[^/]++', 'hash'], ['text', '/rc'], ['variable', '/', '[A-z0-9_-]*', 'filter'], ['text', '/media/cache/resolve']], [], []],
     'liip_imagine_filter' => [['filter', 'path'], ['_controller' => 'Liip\\ImagineBundle\\Controller\\ImagineController::filterAction'], ['filter' => '[A-z0-9_-]*', 'path' => '.+'], [['variable', '/', '.+', 'path'], ['variable', '/', '[A-z0-9_-]*', 'filter'], ['text', '/media/cache/resolve']], [], []],
 ];
