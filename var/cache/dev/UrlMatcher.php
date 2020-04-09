@@ -16,7 +16,6 @@ return [
         '/' => [[['_route' => 'accueil', '_controller' => 'App\\Controller\\AccueilController::index'], null, null, null, false, false, null]],
         '/admin' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\AdminController::adminInfo'], null, null, null, false, false, null]],
         '/admin/creation' => [[['_route' => 'creationInfo', '_controller' => 'App\\Controller\\AdminController::adminModif'], null, null, null, false, false, null]],
-        '/inscription' => [[['_route' => 'inscription', '_controller' => 'App\\Controller\\AdminLogController::index'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\AdminLogController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'logout', '_controller' => 'App\\Controller\\AdminLogController::logout'], null, null, null, false, false, null]],
         '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\ContactController::index'], null, null, null, false, false, null]],
@@ -42,14 +41,15 @@ return [
                 .'|/admin/(?'
                     .'|info/([^/]++)(*:192)'
                     .'|([^/]++)(*:208)'
+                    .'|inscription(*:227)'
                 .')'
                 .'|/categories/(?'
-                    .'|([^/]++)(*:240)'
-                    .'|info/([^/]++)(*:261)'
+                    .'|([^/]++)(*:259)'
+                    .'|info/([^/]++)(*:280)'
                 .')'
                 .'|/media/cache/resolve/(?'
-                    .'|([A-z0-9_-]*)/rc/([^/]++)/(.+)(*:324)'
-                    .'|([A-z0-9_-]*)/(.+)(*:350)'
+                    .'|([A-z0-9_-]*)/rc/([^/]++)/(.+)(*:343)'
+                    .'|([A-z0-9_-]*)/(.+)(*:369)'
                 .')'
             .')/?$}sD',
     ],
@@ -63,10 +63,11 @@ return [
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
         192 => [[['_route' => 'admin_modif', '_controller' => 'App\\Controller\\AdminController::adminModif'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
         208 => [[['_route' => 'supInfo', '_controller' => 'App\\Controller\\AdminController::suppression'], ['id'], ['SUP' => 0], null, false, true, null]],
-        240 => [[['_route' => 'afficher_categorie', '_controller' => 'App\\Controller\\EventController::afficherCategorie'], ['id'], null, null, false, true, null]],
-        261 => [[['_route' => 'afficher_info', '_controller' => 'App\\Controller\\EventController::eventActu'], ['id'], null, null, false, true, null]],
-        324 => [[['_route' => 'liip_imagine_filter_runtime', '_controller' => 'Liip\\ImagineBundle\\Controller\\ImagineController::filterRuntimeAction'], ['filter', 'hash', 'path'], ['GET' => 0], null, false, true, null]],
-        350 => [
+        227 => [[['_route' => 'inscription', '_controller' => 'App\\Controller\\AdminLogController::index'], [], null, null, false, false, null]],
+        259 => [[['_route' => 'afficher_categorie', '_controller' => 'App\\Controller\\EventController::afficherCategorie'], ['id'], null, null, false, true, null]],
+        280 => [[['_route' => 'afficher_info', '_controller' => 'App\\Controller\\EventController::eventActu'], ['id'], null, null, false, true, null]],
+        343 => [[['_route' => 'liip_imagine_filter_runtime', '_controller' => 'Liip\\ImagineBundle\\Controller\\ImagineController::filterRuntimeAction'], ['filter', 'hash', 'path'], ['GET' => 0], null, false, true, null]],
+        369 => [
             [['_route' => 'liip_imagine_filter', '_controller' => 'Liip\\ImagineBundle\\Controller\\ImagineController::filterAction'], ['filter', 'path'], ['GET' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

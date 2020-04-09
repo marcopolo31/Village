@@ -20,7 +20,7 @@ return [
     'creationInfo' => [[], ['_controller' => 'App\\Controller\\AdminController::adminModif'], [], [['text', '/admin/creation']], [], []],
     'admin_modif' => [['id'], ['_controller' => 'App\\Controller\\AdminController::adminModif'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/info']], [], []],
     'supInfo' => [['id'], ['_controller' => 'App\\Controller\\AdminController::suppression'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin']], [], []],
-    'inscription' => [[], ['_controller' => 'App\\Controller\\AdminLogController::index'], [], [['text', '/inscription']], [], []],
+    'inscription' => [[], ['_controller' => 'App\\Controller\\AdminLogController::index'], [], [['text', '/admin/inscription']], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\AdminLogController::login'], [], [['text', '/login']], [], []],
     'logout' => [[], ['_controller' => 'App\\Controller\\AdminLogController::logout'], [], [['text', '/logout']], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\ContactController::index'], [], [['text', '/contact']], [], []],

@@ -1,5 +1,5 @@
 body {
-    background-color: lightblue;
+    padding-top: 70px;
     
     
 }
@@ -15,6 +15,9 @@ body {
     background-size: cover;
     color: #fff;
     margin-bottom: 50px;
+    margin-top: 30px;
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    border-radius: 20px;
     
 }
 
@@ -25,7 +28,8 @@ i.wi{
 
 .card{
     height: auto;
-    width: 300px;
+    width: 350px;
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
 }
 
 .imgHisto{
@@ -40,7 +44,34 @@ i.wi{
 
 }
 
-.carousel .item {
-    max-height: 500px;
+.carousel-inner {
+    height: 670px;
   }
 
+.navbar-nav li{
+    margin-left:150px; 
+  }
+ 
+.card1{
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    
+}
+
+.contact-form{
+    width: 100%;
+}
+
+#map{
+    margin-left: 15px;
+    height: 500px;
+    width: 100%;
+    
+}
+
+.card2{
+    height: 500px;
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+}

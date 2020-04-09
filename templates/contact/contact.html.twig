@@ -5,12 +5,29 @@
 {% block monTitre %}Contact{% endblock %}
 
 {% block body %}
-{{form_start(form)}}
-    {{form_widget(form)}}
-    <input type="submit" value="Valider" class="btn btn-primary">
-{{form_end(form)}}
+<div class="container">
+    <div class="d-flex justify-content-center h-100 ">
+        <div class="card card1">
+            <div class="card-header">
+                <h3>Contact</h3>
+            </div>
+            <div class="card-body d-flex flex-row">
 
-<div id="map" style="width: 100%; height: 400px;">
+                <div class="contact-form">
+                    {{form_start(form)}}
+                    {{form_widget(form)}}
+                    <div class="text-center">
+                        <input type="submit" value="Valider" class="btn btn-primary mb-5">
+                        <input type="reset" value="Annuler" class="btn btn-danger mb-5">
+                    </div>
+                    {{form_end(form)}}
+                </div>
+                <div id="map">
 
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 {% endblock %}

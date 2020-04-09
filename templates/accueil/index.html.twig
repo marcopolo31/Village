@@ -1,7 +1,6 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Accueil{% endblock %}
-
 {% block slide %}
 <div class="carousel-inner">
   <div class="carousel-item active">
@@ -25,32 +24,41 @@
 
 {% endblock %}
 
+
 {% block monTitre %}Bienvenue sur le site du Village{% endblock %}
 
 {% block body %}
-<div class="container">
-  <div class="row">
-    {% for information in informations %}
-    <div class="card mb-4 ml-5">
-      <img class="card-img-top" src="{{vich_uploader_asset(information,'imageFile')|imagine_filter('thumb')}}"
-        alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">{{information.titre}}</h5>
-        <p class="card-text">{{information.libelle}}</p>
-        <p class="card-text">{{information.date}}</p>
+<section class="container mb-5">
 
-        <a href="{{path('afficher_categorie', {'id' : information.id})}}"
-          class="btn btn-primary">{{information.categorie.libelle}}</a>
 
-      </div>
+      <!--First slide-->
+        <div class="row">
+        {% for information in informations %}
+          <div class="col-4">
+            <div class="card mb-4 ml-1 ">
+              <img class="card-img-top" src="{{vich_uploader_asset(information,'imageFile')|imagine_filter('thumb')}}"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">{{information.titre}}</h4>
+                <p class="card-text text-truncate">{{information.libelle}}</p>
+                <p class="card-text">{{information.date}}</p>
+                
+                <a class="btn btn-primary"href="{{path('afficher_info', {'id' : information.id})}}">En savoir plus</a>
+              </div>
+            </div>
+          </div>
+      <!--/.Third slide-->
+          {% endfor %}
     </div>
-    {% endfor %}
-  </div>
-  <div class="navigation">
-    {{ knp_pagination_render(informations) }}
-  </div>
-</div>
+    <!--/.Slides-->
+  <!--/.Carousel Wrapper-->
+
+</section>
+
+
+<h1 class="text-center">Météo du jour:</h1>
 <section id="weathers" class="container">
+  
   <h1>
     Village
   </h1>
@@ -62,60 +70,4 @@
     <span class="weather"></span> C°
   </h2>
 </section>
-{% endblock %}
-{% block footer %}
-<div class="container-fluid text-center ">
-
-  <!-- Grid row -->
-  <div class="row">
-
-    <!-- Grid column -->
-    <div class="container-fluid text-center text-md-left">
-
-      <!-- Grid row -->
-      <div class="row">
-  
-        <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3">
-  
-          <!-- Content -->
-          <h5 class="text-uppercase font-weight-bold">Contact</h5>
-          <ul style="list-style-type: none;">
-            <li>Mairie du Village</li>
-            <li>14 rue de la liberté</li>
-            <li>57310</li>
-            <li>VILLAGE</li>
-            <li>tél:0011223344</li>
-            <li>fax:0011223355</li>
-            <li><a href="{{path('contact')}}">Contact</a></li>
-            <li>Example.info@gmal.com</li>
-          </ul>
-  
-        </div>
-        <!-- Grid column -->
-  
-        <hr class="clearfix w-100 d-md-none pb-3">
-  
-        <!-- Grid column -->
-        <div class="col-md-6 mb-md-0 mb-3">
-  
-          <!-- Content -->
-          <h5 class="text-uppercase font-weight-bold">Horaire d'ouverture</h5>
-          <p>Du lundi au vendredi, de 8h30 à 12h30 et de 13h30 à 17h30.
-            Le samedi de 9h à 12h.
-            Le service urbanisme vous accueille sans rdv du lundi au vendredi de 9h à 12h et uniquement sur rdv de 13h30 à 16h30</p>
-  
-        </div>
-        <!-- Grid column -->
-  
-      </div>
-      <!-- Grid row -->
-  
-    </div>
-  <!-- Grid row -->
-
-</div>
-<div class="footer-copyright text-center py-3">© 2020 Copyright:
-  <a href=""> Marcdev.com</a>
-</div>
 {% endblock %}

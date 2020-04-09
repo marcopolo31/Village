@@ -16,7 +16,7 @@ class AdminLogController extends AbstractController
 
 
     /**
-     * @Route("/inscription", name="inscription")
+     * @Route("/admin/inscription", name="inscription")
      */
     public function index(Request $request, EntityManagerInterface $entityManager, UserPasswordEncoderInterface $encoder)
     {   
@@ -41,7 +41,7 @@ class AdminLogController extends AbstractController
      * @Route("/login", name="login")
      */
     public function login(AuthenticationUtils $utilisateur)
-    {
+    {   
         return $this->render('admin_log/login.html.twig', [
             "lastUserName" => $utilisateur->getLastUsername(),
             "error" => $utilisateur->getLastAuthenticationError()
