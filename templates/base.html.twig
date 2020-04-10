@@ -28,10 +28,10 @@
 
         {% if not app.user %}
         <li class="nav-item active">
-          <a class="nav-link" href="{{path('afficher_categorie', {id : 1})}}">Evenements</a>
+          <a class="nav-link" href="{{path('afficher_categorie', {id : 11})}}">Evenements</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="{{path('afficher_categorie', {id : 2})}}">Actualités</a>
+          <a class="nav-link" href="{{path('afficher_categorie', {id : 12})}}">Actualités</a>
         </li>
         {% else %}
         <li class="nav-item active">
@@ -71,8 +71,9 @@
     {% endblock %}
   </div>
 
-  <h1 class=" border border-dark rounded p-2 m-2 text-white bg-primary text-center">{% block monTitre %}{% endblock %}</h1>
-
+  <div class="d-flex justify-content-center">
+  <h1 class=" text-center w-50">{% block monTitre %}{% endblock %}</h1>
+</div>
   {% block body %}
   
   {% endblock %}

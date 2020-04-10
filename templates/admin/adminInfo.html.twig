@@ -5,6 +5,11 @@
 {% block monTitre %}Liste des Evénements et des Actualités{% endblock %}
 
 {% block body %}
+{% for message in app.flashes('success') %}
+    <div class="alert alert-success">
+        {{message}}
+    </div>
+{% endfor %}
 <div class="container d-flex justify-content-center mb-5 mt-5">
     <a class="btn btn-success w-100" href="{{path('creationInfo')}}">Ajouter</a>
 </div>
@@ -37,6 +42,7 @@
         {% endfor %}
     </div>
 </div>
+<div>
 <div class="navigation">
     {{ knp_pagination_render(informations) }}
 </div>

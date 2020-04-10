@@ -102,6 +102,7 @@ return array(
     'Imagine\\' => array($vendorDir . '/imagine/imagine/src'),
     'GpsLab\\Bundle\\GeoIP2Bundle\\' => array($vendorDir . '/gpslab/geoip2/src'),
     'GeoIp2\\' => array($vendorDir . '/geoip2/geoip2/src'),
+    'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
     'Egulias\\EmailValidator\\' => array($vendorDir . '/egulias/email-validator/EmailValidator'),
     'EasyCorp\\EasyLog\\' => array($vendorDir . '/easycorp/easy-log-handler/src'),
     'Doctrine\\Persistence\\' => array($vendorDir . '/doctrine/persistence/lib/Doctrine/Persistence'),

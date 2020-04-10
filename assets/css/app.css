@@ -26,6 +26,7 @@ i.wi{
     font-size: 150px;
 }
 
+
 .card{
     height: auto;
     width: 350px;
@@ -74,4 +75,20 @@ i.wi{
 .card2{
     height: 500px;
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+}
+
+.text-box {
+	position: absolute;
+    bottom: 80%;
+	left: 15%;
+	right: 15%;
+	color: black;
+    transform: translateY(-50%);
+    
+}
+
+.text-box h2{
+    font-size: 70px;
+    background-color: #fff;
+    
 }

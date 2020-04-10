@@ -152,6 +152,10 @@ class ComposerStaticInit591aaedc8e63043f67a3944dc27484f0
             'GpsLab\\Bundle\\GeoIP2Bundle\\' => 27,
             'GeoIp2\\' => 7,
         ),
+        'F' => 
+        array (
+            'Faker\\' => 6,
+        ),
         'E' => 
         array (
             'Egulias\\EmailValidator\\' => 23,
@@ -574,6 +578,10 @@ class ComposerStaticInit591aaedc8e63043f67a3944dc27484f0
         'GeoIp2\\' => 
         array (
             0 => __DIR__ . '/..' . '/geoip2/geoip2/src',
+        ),
+        'Faker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
         ),
         'Egulias\\EmailValidator\\' => 
         array (
