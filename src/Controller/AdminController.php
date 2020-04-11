@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Listener\ImageCacheSubscriber;
 use App\Entity\Information;
 use App\Form\InformationType;
 use Doctrine\ORM\EntityManagerInterface;
