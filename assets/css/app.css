@@ -24,6 +24,7 @@ body {
 i.wi{
     margin-top: 50px;
     font-size: 150px;
+    margin-bottom: 50px;
 }
 
 
@@ -50,7 +51,7 @@ i.wi{
   }
 
 .navbar-nav li{
-    margin-left:150px; 
+    margin-left: 100px; 
   }
  
 .card1{
@@ -63,6 +64,7 @@ i.wi{
 
 .contact-form{
     width: 100%;
+    height: auto;
 }
 
 #map{
