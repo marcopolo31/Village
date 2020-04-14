@@ -4,6 +4,7 @@ body {
     
 }
 
+/*WEATHER*/
 #weathers{
     width: 100%;
     height: 550px;
@@ -27,13 +28,14 @@ i.wi{
     margin-bottom: 50px;
 }
 
-
+/*ALL CARD*/
 .card{
     height: auto;
     width: 350px;
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
 }
 
+/*Picture History*/
 .imgHisto{
     float: left;
     width: auto;
@@ -46,27 +48,32 @@ i.wi{
 
 }
 
-.carousel-inner {
-    height: 670px;
+/*Carousel Home*/
+.carousel-inner img{
+    height: 550px;
   }
 
+
+/*NAVBAR*/
 .navbar-nav li{
     margin-left: 100px; 
   }
- 
+
+  /*CONTACT*/
 .card1{
     width: 100%;
     margin-bottom: 30px;
     margin-top: 30px;
-    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
     
 }
 
+/*Formulaire*/
 .contact-form{
     width: 100%;
     height: auto;
 }
 
+/*MAP*/
 #map{
     margin-left: 15px;
     height: 500px;
@@ -74,14 +81,16 @@ i.wi{
     
 }
 
+/*CARD Login*/
 .card2{
     height: 500px;
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
 }
 
+/*Banner */
 .text-box {
 	position: absolute;
-    bottom: 80%;
+    bottom: 50%;
 	left: 15%;
 	right: 15%;
 	color: black;
@@ -93,4 +102,12 @@ i.wi{
     font-size: 70px;
     background-color: #fff;
     
+}
+
+/*MEDIA QUERY*/
+@media only screen and (min-width: 768px){
+    .contact1{
+        display: flex;
+        flex-direction: row;
+    }
 }
