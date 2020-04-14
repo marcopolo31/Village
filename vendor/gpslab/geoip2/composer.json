@@ -1,0 +1,34 @@
+{
+    "name": "gpslab/geoip2",
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "homepage": "https://github.com/gpslab/geoip2",
+    "description": "A Symfony Bundle for the Maxmind GeoIP2 API",
+    "autoload": {
+        "psr-4": {
+            "GpsLab\\Bundle\\GeoIP2Bundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GpsLab\\Bundle\\GeoIP2Bundle\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "ext-phar": "*",
+        "ext-zlib": "*",
+        "php": ">=7.1.0",
+        "geoip2/geoip2": "~2.0",
+        "symfony/http-kernel": "~2.3|~3.0|~4.0|~5.0",
+        "symfony/dependency-injection": "~2.3|~3.0|~4.0|~5.0",
+        "symfony/expression-language": "~2.3|~3.0|~4.0|~5.0",
+        "symfony/config": "~2.3|~3.0|~4.0|~5.0",
+        "symfony/console": "~2.3|~3.0|~4.0|~5.0",
+        "symfony/filesystem": "~2.3|~3.0|~4.0|~5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0|~8.0",
+        "phpstan/phpstan": "^0.12",
+        "phpstan/phpstan-phpunit": "^0.12"
+    }
+}
