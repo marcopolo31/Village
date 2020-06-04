@@ -18,6 +18,5 @@ require('@fortawesome/fontawesome-free/css/all.min.css');
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
 // import $ from 'jquery';
-var $ = require('jquery');
 
 console.log('Hello Webpack Encore! Edit me in assets/js/app.js');

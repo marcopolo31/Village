@@ -150,62 +150,75 @@ class __TwigTemplate_e28c37229b0180baafc9a580d58b4caba13891b32f5305eb3fb9c667806
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 35
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 35, $this->source); })()), "flashes", [0 => "email"], "method", false, false, false, 35));
+        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+            // line 36
+            echo "    <div class=\"flash-email bg-success text-center w-15\">
+        ";
+            // line 37
+            echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+            echo "
+    </div>
+";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 40
         echo "
-<h2 class=\"text-center mt-5\">Voici les Actualités et Evénements:</h2>
+<h2 class=\"text-center mt-5 mb-5\">Découvrez les Actus et Événements:</h2>
 <section class=\"container mb-5\">
 
 
-      <!--First slide-->
+      <!--Part Event Actu-->
         <div class=\"row\">
         ";
-        // line 42
+        // line 47
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["informations"]) || array_key_exists("informations", $context) ? $context["informations"] : (function () { throw new RuntimeError('Variable "informations" does not exist.', 42, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["informations"]) || array_key_exists("informations", $context) ? $context["informations"] : (function () { throw new RuntimeError('Variable "informations" does not exist.', 47, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["information"]) {
-            // line 43
+            // line 48
             echo "          <div class=\"col-md-6 d-flex justify-content-center\">
             <div class=\"card mb-4 ml-1 \">
               <img class=\"card-img-top\" src=\"";
-            // line 45
+            // line 50
             echo twig_escape_filter($this->env, $this->extensions['Liip\ImagineBundle\Templating\FilterExtension']->filter($this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset($context["information"], "imageFile"), "thumb"), "html", null, true);
             echo "\"
                 alt=\"Card image cap\">
               <div class=\"card-body\">
                 <h4 class=\"card-title\">";
-            // line 48
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["information"], "titre", [], "any", false, false, false, 48), "html", null, true);
+            // line 53
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["information"], "titre", [], "any", false, false, false, 53), "html", null, true);
             echo "</h4>
                 <p class=\"card-text text-truncate\">";
-            // line 49
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["information"], "libelle", [], "any", false, false, false, 49), "html", null, true);
+            // line 54
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["information"], "libelle", [], "any", false, false, false, 54), "html", null, true);
             echo "</p>
                 <p class=\"card-text\">";
-            // line 50
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["information"], "date", [], "any", false, false, false, 50), "html", null, true);
+            // line 55
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["information"], "date", [], "any", false, false, false, 55), "html", null, true);
             echo "</p>
                 
                 <a class=\"btn btn-primary\"href=\"";
-            // line 52
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("afficher_info", ["id" => twig_get_attribute($this->env, $this->source, $context["information"], "id", [], "any", false, false, false, 52)]), "html", null, true);
+            // line 57
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("afficher_info", ["id" => twig_get_attribute($this->env, $this->source, $context["information"], "id", [], "any", false, false, false, 57)]), "html", null, true);
             echo "\">En savoir plus</a>
               </div>
             </div>
           </div>
-      <!--/.Third slide-->
           ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['information'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 58
+        // line 62
         echo "    </div>
-    <!--/.Slides-->
-  <!--/.Carousel Wrapper-->
   <div class=\"d-flex justify-content-center\">
     <div class=\"navigation\">
         ";
-        // line 63
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["informations"]) || array_key_exists("informations", $context) ? $context["informations"] : (function () { throw new RuntimeError('Variable "informations" does not exist.', 63, $this->source); })()));
+        // line 65
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["informations"]) || array_key_exists("informations", $context) ? $context["informations"] : (function () { throw new RuntimeError('Variable "informations" does not exist.', 65, $this->source); })()));
         echo "
     </div>
     </div>
@@ -247,7 +260,7 @@ class __TwigTemplate_e28c37229b0180baafc9a580d58b4caba13891b32f5305eb3fb9c667806
 
     public function getDebugInfo()
     {
-        return array (  208 => 63,  201 => 58,  189 => 52,  184 => 50,  180 => 49,  176 => 48,  170 => 45,  166 => 43,  162 => 42,  153 => 35,  143 => 34,  124 => 33,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
+        return array (  221 => 65,  216 => 62,  205 => 57,  200 => 55,  196 => 54,  192 => 53,  186 => 50,  182 => 48,  178 => 47,  169 => 40,  160 => 37,  157 => 36,  153 => 35,  143 => 34,  124 => 33,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -286,12 +299,17 @@ class __TwigTemplate_e28c37229b0180baafc9a580d58b4caba13891b32f5305eb3fb9c667806
 
 {% block monTitre %}Bienvenue au Village{% endblock %}
 {% block body %}
+{% for message in app.flashes('email') %}
+    <div class=\"flash-email bg-success text-center w-15\">
+        {{ message }}
+    </div>
+{% endfor %}
 
-<h2 class=\"text-center mt-5\">Voici les Actualités et Evénements:</h2>
+<h2 class=\"text-center mt-5 mb-5\">Découvrez les Actus et Événements:</h2>
 <section class=\"container mb-5\">
 
 
-      <!--First slide-->
+      <!--Part Event Actu-->
         <div class=\"row\">
         {% for information in informations %}
           <div class=\"col-md-6 d-flex justify-content-center\">
@@ -307,11 +325,8 @@ class __TwigTemplate_e28c37229b0180baafc9a580d58b4caba13891b32f5305eb3fb9c667806
               </div>
             </div>
           </div>
-      <!--/.Third slide-->
           {% endfor %}
     </div>
-    <!--/.Slides-->
-  <!--/.Carousel Wrapper-->
   <div class=\"d-flex justify-content-center\">
     <div class=\"navigation\">
         {{ knp_pagination_render(informations) }}

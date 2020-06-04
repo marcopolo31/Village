@@ -19,11 +19,6 @@ class CategorieRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Categorie::class);
     }
-    
-    public function findAllWithPagination() : Query{
-        return $this->createQueryBuilder('v')
-            ->getQuery();
-    }
 
     // /**
     //  * @return Categorie[] Returns an array of Categorie objects

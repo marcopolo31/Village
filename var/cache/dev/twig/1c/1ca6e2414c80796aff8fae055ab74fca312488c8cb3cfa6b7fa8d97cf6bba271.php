@@ -62,7 +62,7 @@ class __TwigTemplate_bea3937d5f5a12f0ea971a3523286750403cd7f3caa8683c4d710eb3c61
         echo "</head>
 
 <body>
-  <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark fixed-top\">
+  <nav class=\" navbar navbar-expand-lg navbar-dark bg-dark fixed-top\">
     <a class=\"navbar-brand\" href=\"";
         // line 18
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil");
@@ -88,7 +88,7 @@ class __TwigTemplate_bea3937d5f5a12f0ea971a3523286750403cd7f3caa8683c4d710eb3c61
           <a class=\"nav-link\" href=\"";
             // line 31
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("afficher_categorie", ["id" => 13]);
-            echo "\"><i class=\"far fa-calendar-alt\"></i> Evenements</a>
+            echo "\"><i class=\"far fa-calendar-alt\"></i> Événements</a>
         </li>
         <li class=\"nav-item active\">
           <a class=\"nav-link\" href=\"";
@@ -240,7 +240,7 @@ class __TwigTemplate_bea3937d5f5a12f0ea971a3523286750403cd7f3caa8683c4d710eb3c61
 
       </div>
       <div class=\"footer-copyright text-center py-3\">© 2020 Copyright:
-        <a href=\"\"> Marcdev.com</a>
+        <a href=\"https://www.marc-regnier.com\">www.marc-regnier.com</a>
       </div>
   </footer>
   ";
@@ -428,7 +428,7 @@ class __TwigTemplate_bea3937d5f5a12f0ea971a3523286750403cd7f3caa8683c4d710eb3c61
 </head>
 
 <body>
-  <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark fixed-top\">
+  <nav class=\" navbar navbar-expand-lg navbar-dark bg-dark fixed-top\">
     <a class=\"navbar-brand\" href=\"{{path('accueil')}}\">Mairie</a>
     <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\"
       aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
@@ -442,7 +442,7 @@ class __TwigTemplate_bea3937d5f5a12f0ea971a3523286750403cd7f3caa8683c4d710eb3c61
 
         {% if not app.user %}
         <li class=\"nav-item active\">
-          <a class=\"nav-link\" href=\"{{path('afficher_categorie', {id : 13})}}\"><i class=\"far fa-calendar-alt\"></i> Evenements</a>
+          <a class=\"nav-link\" href=\"{{path('afficher_categorie', {id : 13})}}\"><i class=\"far fa-calendar-alt\"></i> Événements</a>
         </li>
         <li class=\"nav-item active\">
           <a class=\"nav-link\" href=\"{{path('afficher_categorie', {id : 14})}}\"><i class=\"far fa-newspaper\"></i> Actualités</a>
@@ -545,7 +545,7 @@ class __TwigTemplate_bea3937d5f5a12f0ea971a3523286750403cd7f3caa8683c4d710eb3c61
 
       </div>
       <div class=\"footer-copyright text-center py-3\">© 2020 Copyright:
-        <a href=\"\"> Marcdev.com</a>
+        <a href=\"https://www.marc-regnier.com\">www.marc-regnier.com</a>
       </div>
   </footer>
   {% block javascripts %}

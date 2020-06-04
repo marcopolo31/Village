@@ -51,7 +51,7 @@ class AdminController extends AbstractController
         {
 
         if($information->getImageFile()instanceof UploadedFile){
-            $cacheManager->remove($uploaderHelper->asset($information, 'imageFile') );
+            $cacheManager->remove($uploaderHelper->asset($information, 'imageFile'));
         }
             $entityManager->persist($information);
             $entityManager->flush();

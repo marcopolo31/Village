@@ -116,7 +116,7 @@ class __TwigTemplate_3f65c15931eef0099006b9259e4b86a4a1fea23edd42f61c6f901f044a1
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 12
-        echo "<div class=\"container\">
+        echo "<div class=\"container col-md-6 d-flex justify-content-center\">
 
 ";
         // line 14
@@ -175,7 +175,7 @@ class __TwigTemplate_3f65c15931eef0099006b9259e4b86a4a1fea23edd42f61c6f901f044a1
 {% endif %}
 {% endblock %}
 {% block body %}
-<div class=\"container\">
+<div class=\"container col-md-6 d-flex justify-content-center\">
 
 {{form_start(form)}}
         {{form_widget(form)}}

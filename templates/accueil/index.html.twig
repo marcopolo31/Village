@@ -32,12 +32,17 @@
 
 {% block monTitre %}Bienvenue au Village{% endblock %}
 {% block body %}
+{% for message in app.flashes('email') %}
+    <div class="flash-email bg-success text-center">
+        {{ message }}
+    </div>
+{% endfor %}
 
-<h2 class="text-center mt-5">Voici les Actualités et Evénements:</h2>
+<h2 class="text-center mt-5 mb-5">Découvrez les Actus et Événements:</h2>
 <section class="container mb-5">
 
 
-      <!--First slide-->
+      <!--Part Event Actu-->
         <div class="row">
         {% for information in informations %}
           <div class="col-md-6 d-flex justify-content-center">
@@ -53,11 +58,8 @@
               </div>
             </div>
           </div>
-      <!--/.Third slide-->
           {% endfor %}
     </div>
-    <!--/.Slides-->
-  <!--/.Carousel Wrapper-->
   <div class="d-flex justify-content-center">
     <div class="navigation">
         {{ knp_pagination_render(informations) }}
