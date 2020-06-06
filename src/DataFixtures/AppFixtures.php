@@ -28,7 +28,8 @@ class AppFixtures extends Fixture
             ->setLibelle($faker->paragraph())
             ->setImage("jeu.jpg")
             ->setDate("Du 04 Avril 2020 au 05 Juin 2020")
-            ->setUpdatedAt($faker->dateTimeBetween($startDate = '-6 months', $endDate = 'now', $timezone = null))
+            ->setUpdatedAt($faker->dateTimeBetween($startDate = '-3 months', $endDate = 'now', $timezone = null))
+            ->setCreatedAt($faker->dateTimeBetween($startDate = '-6 months', $endDate = 'now', $timezone = null))
             ->setCategorie($cat1)
             
             ;
@@ -39,7 +40,8 @@ class AppFixtures extends Fixture
             ->setLibelle($faker->paragraph())
             ->setImage("biere.jpg")
             ->setDate("Du 23 Avril 2020 au 07 mai 2020")
-            ->setUpdatedAt($faker->dateTimeBetween($startDate = '-6 months', $endDate = 'now', $timezone = null))
+            ->setUpdatedAt($faker->dateTimeBetween($startDate = '-3 months', $endDate = 'now', $timezone = null))
+            ->setCreatedAt($faker->dateTimeBetween($startDate = '-6 months', $endDate = 'now', $timezone = null))
             ->setCategorie($cat1)
             
             ;
@@ -50,7 +52,8 @@ class AppFixtures extends Fixture
             ->setLibelle($faker->paragraph())
             ->setImage("party.jpg")
             ->setDate("15 Avril 2020")
-            ->setUpdatedAt($faker->dateTimeBetween($startDate = '-6 months', $endDate = 'now', $timezone = null))
+            ->setUpdatedAt($faker->dateTimeBetween($startDate = '-3 months', $endDate = 'now', $timezone = null))
+            ->setCreatedAt($faker->dateTimeBetween($startDate = '-6 months', $endDate = 'now', $timezone = null))
             ->setCategorie($cat1)
             
             ;
@@ -61,7 +64,8 @@ class AppFixtures extends Fixture
             ->setLibelle($faker->paragraph())
             ->setImage("marathon.jpg")
             ->setDate("Le 15 Mai 2020")
-            ->setUpdatedAt($faker->dateTimeBetween($startDate = '-6 months', $endDate = 'now', $timezone = null))
+            ->setUpdatedAt($faker->dateTimeBetween($startDate = '-3 months', $endDate = 'now', $timezone = null))
+            ->setCreatedAt($faker->dateTimeBetween($startDate = '-6 months', $endDate = 'now', $timezone = null))
             ->setCategorie($cat1)
             
             ;
@@ -72,7 +76,8 @@ class AppFixtures extends Fixture
                 ->setLibelle($faker->paragraph())
                 ->setImage("coronavirus.jpg")
                 ->setDate("Depuis le 16 Mars 2020")
-                ->setUpdatedAt($faker->dateTimeBetween($startDate = '-6 months', $endDate = 'now', $timezone = null))
+                ->setUpdatedAt($faker->dateTimeBetween($startDate = '-3 months', $endDate = 'now', $timezone = null))
+                ->setCreatedAt($faker->dateTimeBetween($startDate = '-6 months', $endDate = 'now', $timezone = null))
                 ->setCategorie($cat2)
                 ;
         $manager->persist($info5);
@@ -82,7 +87,8 @@ class AppFixtures extends Fixture
                 ->setLibelle($faker->paragraph())
                 ->setImage("cambriolage.jpg")
                 ->setDate("Depuis le 01 Janvier 2020")
-                ->setUpdatedAt($faker->dateTimeBetween($startDate = '-6 months', $endDate = 'now', $timezone = null))
+                ->setUpdatedAt($faker->dateTimeBetween($startDate = '-3 months', $endDate = 'now', $timezone = null))
+            ->setCreatedAt($faker->dateTimeBetween($startDate = '-6 months', $endDate = 'now', $timezone = null))
                 ->setCategorie($cat2)
                 ;
         $manager->persist($info6);
@@ -92,7 +98,8 @@ class AppFixtures extends Fixture
                 ->setLibelle($faker->paragraph())
                 ->setImage("dechet.jpg")
                 ->setDate("A partir du 23 Février 2020")
-                ->setUpdatedAt($faker->dateTimeBetween($startDate = '-6 months', $endDate = 'now', $timezone = null))
+                ->setUpdatedAt($faker->dateTimeBetween($startDate = '-3 months', $endDate = 'now', $timezone = null))
+                ->setCreatedAt($faker->dateTimeBetween($startDate = '-6 months', $endDate = 'now', $timezone = null))
                 ->setCategorie($cat2)
                 ;
         $manager->persist($info7);
@@ -102,7 +109,8 @@ class AppFixtures extends Fixture
                 ->setLibelle($faker->paragraph())
                 ->setImage("poste.jpg")
                 ->setDate("Du 23 Mars 2020 au 06 Juin 2020")
-                ->setUpdatedAt($faker->dateTimeBetween($startDate = '-6 months', $endDate = 'now', $timezone = null))
+                ->setUpdatedAt($faker->dateTimeBetween($startDate = '-3 months', $endDate = 'now', $timezone = null))
+            ->setCreatedAt($faker->dateTimeBetween($startDate = '-6 months', $endDate = 'now', $timezone = null))
                 ->setCategorie($cat2)
                 ;
         $manager->persist($info8);

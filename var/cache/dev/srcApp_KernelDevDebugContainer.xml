@@ -499,6 +499,9 @@
     <service id="App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true">
       <tag name="doctrine.fixture.orm"/>
     </service>
+    <service id="App\Form\ApplicationType" class="App\Form\ApplicationType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\ContactType" class="App\Form\ContactType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -963,6 +966,7 @@
         <argument>Liip\ImagineBundle\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\ApplicationType</argument>
         <argument>App\Form\ContactType</argument>
         <argument>App\Form\InformationType</argument>
         <argument>App\Form\InscriptionType</argument>
@@ -1304,7 +1308,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.VrbrMMZ"/>
+      <argument type="service" id=".service_locator.AkAMVSX"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -6136,6 +6140,8 @@
     <service id=".abstract.instanceof.App\Controller\HistoireController" class="App\Controller\HistoireController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ApplicationType" class="App\Form\ApplicationType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ApplicationType" class="App\Form\ApplicationType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ContactType" class="App\Form\ContactType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ContactType" class="App\Form\ContactType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\InformationType" class="App\Form\InformationType" autowire="true" abstract="true"/>
@@ -6335,6 +6341,12 @@
         <argument>make:migration</argument>
       </call>
     </service>
+    <service id=".service_locator.Iqh3UaF" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="repository" type="service" id="App\Repository\InformationRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.H_Sfq_Z" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6389,10 +6401,10 @@
         <argument key="information" type="service" id=".errored..service_locator.af50ESG.App\Entity\Information"/>
       </argument>
     </service>
-    <service id=".service_locator.7WOe8_1" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.PkOMpJc" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Controller\AccueilController::index" type="service" id=".service_locator.H_Sfq_Z"/>
+        <argument key="App\Controller\AccueilController::index" type="service" id=".service_locator.Iqh3UaF"/>
         <argument key="App\Controller\AdminController::adminInfo" type="service" id=".service_locator.H_Sfq_Z"/>
         <argument key="App\Controller\AdminController::adminModif" type="service" id=".service_locator.5g.rswY"/>
         <argument key="App\Controller\AdminController::suppression" type="service" id=".service_locator.QzEZv5o"/>
@@ -6401,7 +6413,7 @@
         <argument key="App\Controller\ContactController::index" type="service" id=".service_locator.t4zBQ5b"/>
         <argument key="App\Controller\EventController::afficherCategorie" type="service" id=".service_locator.CAwUP2a"/>
         <argument key="App\Controller\EventController::eventActu" type="service" id=".service_locator.af50ESG"/>
-        <argument key="App\Controller\AccueilController:index" type="service" id=".service_locator.H_Sfq_Z"/>
+        <argument key="App\Controller\AccueilController:index" type="service" id=".service_locator.Iqh3UaF"/>
         <argument key="App\Controller\AdminController:adminInfo" type="service" id=".service_locator.H_Sfq_Z"/>
         <argument key="App\Controller\AdminController:adminModif" type="service" id=".service_locator.5g.rswY"/>
         <argument key="App\Controller\AdminController:suppression" type="service" id=".service_locator.QzEZv5o"/>
@@ -6471,9 +6483,10 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.VrbrMMZ" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.AkAMVSX" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\ApplicationType" type="service" id="App\Form\ApplicationType"/>
         <argument key="App\Form\ContactType" type="service" id="App\Form\ContactType"/>
         <argument key="App\Form\InformationType" type="service" id="App\Form\InformationType"/>
         <argument key="App\Form\InscriptionType" type="service" id="App\Form\InscriptionType"/>
@@ -6871,12 +6884,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.7WOe8_1"/>
+      <argument type="service" id=".service_locator.PkOMpJc"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.7WOe8_1"/>
+      <argument type="service" id=".service_locator.PkOMpJc"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -7318,7 +7331,7 @@
     <service id="Swift_Transport" alias="swiftmailer.mailer.default.transport.spool" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.7WOe8_1"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.PkOMpJc"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

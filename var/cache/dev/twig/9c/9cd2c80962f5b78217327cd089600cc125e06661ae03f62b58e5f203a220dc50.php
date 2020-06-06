@@ -154,7 +154,7 @@ class __TwigTemplate_e28c37229b0180baafc9a580d58b4caba13891b32f5305eb3fb9c667806
         $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 35, $this->source); })()), "flashes", [0 => "email"], "method", false, false, false, 35));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
             // line 36
-            echo "    <div class=\"flash-email bg-success text-center w-15\">
+            echo "    <div class=\"flash-email bg-success text-center\">
         ";
             // line 37
             echo twig_escape_filter($this->env, $context["message"], "html", null, true);
@@ -167,7 +167,7 @@ class __TwigTemplate_e28c37229b0180baafc9a580d58b4caba13891b32f5305eb3fb9c667806
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 40
         echo "
-<h2 class=\"text-center mt-5 mb-5\">Découvrez les Actus et Événements:</h2>
+<h2 class=\"text-center mt-5 mb-5\">Découvrez les Actus et Événements récentes:</h2>
 <section class=\"container mb-5\">
 
 
@@ -191,18 +191,22 @@ class __TwigTemplate_e28c37229b0180baafc9a580d58b4caba13891b32f5305eb3fb9c667806
             // line 53
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["information"], "titre", [], "any", false, false, false, 53), "html", null, true);
             echo "</h4>
-                <p class=\"card-text text-truncate\">";
+                <p>Créé le ";
             // line 54
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["information"], "libelle", [], "any", false, false, false, 54), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["information"], "createdAt", [], "any", false, false, false, 54), "d/m/y"), "html", null, true);
+            echo "</p>
+                <p class=\"card-text text-truncate\">";
+            // line 55
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["information"], "libelle", [], "any", false, false, false, 55), "html", null, true);
             echo "</p>
                 <p class=\"card-text\">";
-            // line 55
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["information"], "date", [], "any", false, false, false, 55), "html", null, true);
+            // line 56
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["information"], "date", [], "any", false, false, false, 56), "html", null, true);
             echo "</p>
                 
                 <a class=\"btn btn-primary\"href=\"";
-            // line 57
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("afficher_info", ["id" => twig_get_attribute($this->env, $this->source, $context["information"], "id", [], "any", false, false, false, 57)]), "html", null, true);
+            // line 58
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("afficher_info", ["id" => twig_get_attribute($this->env, $this->source, $context["information"], "id", [], "any", false, false, false, 58)]), "html", null, true);
             echo "\">En savoir plus</a>
               </div>
             </div>
@@ -212,16 +216,9 @@ class __TwigTemplate_e28c37229b0180baafc9a580d58b4caba13891b32f5305eb3fb9c667806
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['information'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 62
+        // line 63
         echo "    </div>
-  <div class=\"d-flex justify-content-center\">
-    <div class=\"navigation\">
-        ";
-        // line 65
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["informations"]) || array_key_exists("informations", $context) ? $context["informations"] : (function () { throw new RuntimeError('Variable "informations" does not exist.', 65, $this->source); })()));
-        echo "
-    </div>
-    </div>
+
 </section>
 
 
@@ -260,7 +257,7 @@ class __TwigTemplate_e28c37229b0180baafc9a580d58b4caba13891b32f5305eb3fb9c667806
 
     public function getDebugInfo()
     {
-        return array (  221 => 65,  216 => 62,  205 => 57,  200 => 55,  196 => 54,  192 => 53,  186 => 50,  182 => 48,  178 => 47,  169 => 40,  160 => 37,  157 => 36,  153 => 35,  143 => 34,  124 => 33,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
+        return array (  220 => 63,  209 => 58,  204 => 56,  200 => 55,  196 => 54,  192 => 53,  186 => 50,  182 => 48,  178 => 47,  169 => 40,  160 => 37,  157 => 36,  153 => 35,  143 => 34,  124 => 33,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -300,12 +297,12 @@ class __TwigTemplate_e28c37229b0180baafc9a580d58b4caba13891b32f5305eb3fb9c667806
 {% block monTitre %}Bienvenue au Village{% endblock %}
 {% block body %}
 {% for message in app.flashes('email') %}
-    <div class=\"flash-email bg-success text-center w-15\">
+    <div class=\"flash-email bg-success text-center\">
         {{ message }}
     </div>
 {% endfor %}
 
-<h2 class=\"text-center mt-5 mb-5\">Découvrez les Actus et Événements:</h2>
+<h2 class=\"text-center mt-5 mb-5\">Découvrez les Actus et Événements récentes:</h2>
 <section class=\"container mb-5\">
 
 
@@ -318,6 +315,7 @@ class __TwigTemplate_e28c37229b0180baafc9a580d58b4caba13891b32f5305eb3fb9c667806
                 alt=\"Card image cap\">
               <div class=\"card-body\">
                 <h4 class=\"card-title\">{{information.titre}}</h4>
+                <p>Créé le {{ information.createdAt|date('d/m/y')}}</p>
                 <p class=\"card-text text-truncate\">{{information.libelle}}</p>
                 <p class=\"card-text\">{{information.date}}</p>
                 
@@ -327,11 +325,7 @@ class __TwigTemplate_e28c37229b0180baafc9a580d58b4caba13891b32f5305eb3fb9c667806
           </div>
           {% endfor %}
     </div>
-  <div class=\"d-flex justify-content-center\">
-    <div class=\"navigation\">
-        {{ knp_pagination_render(informations) }}
-    </div>
-    </div>
+
 </section>
 
 

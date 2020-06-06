@@ -1,6 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Modif{% endblock %}
+{% block title %}
+{% if isModification %}
+    Modification {{information.titre}}
+{% else %}
+    Ajout d'une information
+    {% endif %}
+{% endblock %}
 {% block monTitre %}
 {% if isModification %}
     Modification {{information.titre}}

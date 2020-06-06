@@ -66,7 +66,18 @@ class __TwigTemplate_3f65c15931eef0099006b9259e4b86a4a1fea23edd42f61c6f901f044a1
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Modif";
+        // line 4
+        if ((isset($context["isModification"]) || array_key_exists("isModification", $context) ? $context["isModification"] : (function () { throw new RuntimeError('Variable "isModification" does not exist.', 4, $this->source); })())) {
+            // line 5
+            echo "    Modification ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["information"]) || array_key_exists("information", $context) ? $context["information"] : (function () { throw new RuntimeError('Variable "information" does not exist.', 5, $this->source); })()), "titre", [], "any", false, false, false, 5), "html", null, true);
+            echo "
+";
+        } else {
+            // line 7
+            echo "    Ajout d'une information
+    ";
+        }
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -75,7 +86,7 @@ class __TwigTemplate_3f65c15931eef0099006b9259e4b86a4a1fea23edd42f61c6f901f044a1
 
     }
 
-    // line 4
+    // line 10
     public function block_monTitre($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -85,15 +96,15 @@ class __TwigTemplate_3f65c15931eef0099006b9259e4b86a4a1fea23edd42f61c6f901f044a1
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "monTitre"));
 
-        // line 5
-        if ((isset($context["isModification"]) || array_key_exists("isModification", $context) ? $context["isModification"] : (function () { throw new RuntimeError('Variable "isModification" does not exist.', 5, $this->source); })())) {
-            // line 6
+        // line 11
+        if ((isset($context["isModification"]) || array_key_exists("isModification", $context) ? $context["isModification"] : (function () { throw new RuntimeError('Variable "isModification" does not exist.', 11, $this->source); })())) {
+            // line 12
             echo "    Modification ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["information"]) || array_key_exists("information", $context) ? $context["information"] : (function () { throw new RuntimeError('Variable "information" does not exist.', 6, $this->source); })()), "titre", [], "any", false, false, false, 6), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["information"]) || array_key_exists("information", $context) ? $context["information"] : (function () { throw new RuntimeError('Variable "information" does not exist.', 12, $this->source); })()), "titre", [], "any", false, false, false, 12), "html", null, true);
             echo "
 ";
         } else {
-            // line 8
+            // line 14
             echo "    Ajout d'une information
 ";
         }
@@ -105,7 +116,7 @@ class __TwigTemplate_3f65c15931eef0099006b9259e4b86a4a1fea23edd42f61c6f901f044a1
 
     }
 
-    // line 11
+    // line 17
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -115,25 +126,25 @@ class __TwigTemplate_3f65c15931eef0099006b9259e4b86a4a1fea23edd42f61c6f901f044a1
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 12
+        // line 18
         echo "<div class=\"container col-md-6 d-flex justify-content-center\">
 
 ";
-        // line 14
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 14, $this->source); })()), 'form_start');
+        // line 20
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 20, $this->source); })()), 'form_start');
         echo "
         ";
-        // line 15
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 15, $this->source); })()), 'widget');
+        // line 21
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 21, $this->source); })()), 'widget');
         echo "
         <a href=\"";
-        // line 16
+        // line 22
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
         echo "\" class=\"btn btn-primary\">Retour</a>
         <input type=\"submit\" value=\"valider\" class=\"btn btn-success\">
 ";
-        // line 18
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 18, $this->source); })()), 'form_end');
+        // line 24
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 24, $this->source); })()), 'form_end');
         echo "
 
 
@@ -159,14 +170,20 @@ class __TwigTemplate_3f65c15931eef0099006b9259e4b86a4a1fea23edd42f61c6f901f044a1
 
     public function getDebugInfo()
     {
-        return array (  136 => 18,  131 => 16,  127 => 15,  123 => 14,  119 => 12,  109 => 11,  97 => 8,  91 => 6,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
+        return array (  147 => 24,  142 => 22,  138 => 21,  134 => 20,  130 => 18,  120 => 17,  108 => 14,  102 => 12,  100 => 11,  90 => 10,  78 => 7,  72 => 5,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Modif{% endblock %}
+{% block title %}
+{% if isModification %}
+    Modification {{information.titre}}
+{% else %}
+    Ajout d'une information
+    {% endif %}
+{% endblock %}
 {% block monTitre %}
 {% if isModification %}
     Modification {{information.titre}}
