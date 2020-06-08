@@ -167,7 +167,7 @@ class __TwigTemplate_e28c37229b0180baafc9a580d58b4caba13891b32f5305eb3fb9c667806
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 40
         echo "
-<h2 class=\"text-center mt-5 mb-5\">Découvrez les Actus et Événements récentes:</h2>
+<h2 class=\"text-center mt-5 mb-5\">Découvrez les 4 dernières Actus et Événements:</h2>
 <section class=\"container mb-5\">
 
 
@@ -302,7 +302,7 @@ class __TwigTemplate_e28c37229b0180baafc9a580d58b4caba13891b32f5305eb3fb9c667806
     </div>
 {% endfor %}
 
-<h2 class=\"text-center mt-5 mb-5\">Découvrez les Actus et Événements récentes:</h2>
+<h2 class=\"text-center mt-5 mb-5\">Découvrez les 4 dernières Actus et Événements:</h2>
 <section class=\"container mb-5\">
 
 

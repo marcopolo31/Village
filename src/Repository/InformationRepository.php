@@ -20,6 +20,10 @@ class InformationRepository extends ServiceEntityRepository
         parent::__construct($registry, Information::class);
     }
 
+    public function findAllWithPagination() : Query{
+        return $this->createQueryBuilder('v')
+            ->getQuery();
+    }
 
     public function findInfoRecent(){
         return $this->createQueryBuilder('i')
