@@ -3456,6 +3456,10 @@
         <argument>!Framework</argument>
       </call>
       <call method="addPath">
+        <argument>C:\Users\marcr\Desktop\symfony\Village/templates/bundles/TwigBundle</argument>
+        <argument>Twig</argument>
+      </call>
+      <call method="addPath">
         <argument>C:\Users\marcr\Desktop\symfony\Village\vendor\symfony\twig-bundle/Resources/views</argument>
         <argument>Twig</argument>
       </call>

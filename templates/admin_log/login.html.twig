@@ -19,12 +19,12 @@ Login
             <form action="{{path('login')}}" method="POST">
 
                 <div class="form-group">
-                    <label>Login :</label>
-                    <input type="text" required name="_username" class="form-control" value="{{lastUserName}}">
+                    <label>Votre Login :</label>
+                    <input type="text" required name="_username" class="form-control" value="{{lastUserName}}" placeholder="Saisir un nom ou pseudo">
                 </div>
                 <div class="form-group">
-                    <label>Password :</label>
-                    <input type="password" required name="_password" class="form-control">
+                    <label>Mot de passe :</label>
+                    <input type="password" required name="_password" class="form-control" placeholder="saisissez votre mot de passe">
                 </div>
                 <div class="text-center">
                     <input type="submit" class="btn btn-primary" value="s'identifier">

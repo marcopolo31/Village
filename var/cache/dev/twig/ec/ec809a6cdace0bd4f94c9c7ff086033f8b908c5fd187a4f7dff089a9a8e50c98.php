@@ -129,15 +129,15 @@ class __TwigTemplate_144fa7e5a8b5e74f637db683dda1fe59322b14338fb96402422a6fe5fa2
         echo "\" method=\"POST\">
 
                 <div class=\"form-group\">
-                    <label>Login :</label>
+                    <label>Votre Login :</label>
                     <input type=\"text\" required name=\"_username\" class=\"form-control\" value=\"";
         // line 23
         echo twig_escape_filter($this->env, (isset($context["lastUserName"]) || array_key_exists("lastUserName", $context) ? $context["lastUserName"] : (function () { throw new RuntimeError('Variable "lastUserName" does not exist.', 23, $this->source); })()), "html", null, true);
-        echo "\">
+        echo "\" placeholder=\"Saisir un nom ou pseudo\">
                 </div>
                 <div class=\"form-group\">
-                    <label>Password :</label>
-                    <input type=\"password\" required name=\"_password\" class=\"form-control\">
+                    <label>Mot de passe :</label>
+                    <input type=\"password\" required name=\"_password\" class=\"form-control\" placeholder=\"saisissez votre mot de passe\">
                 </div>
                 <div class=\"text-center\">
                     <input type=\"submit\" class=\"btn btn-primary\" value=\"s'identifier\">
@@ -198,12 +198,12 @@ Login
             <form action=\"{{path('login')}}\" method=\"POST\">
 
                 <div class=\"form-group\">
-                    <label>Login :</label>
-                    <input type=\"text\" required name=\"_username\" class=\"form-control\" value=\"{{lastUserName}}\">
+                    <label>Votre Login :</label>
+                    <input type=\"text\" required name=\"_username\" class=\"form-control\" value=\"{{lastUserName}}\" placeholder=\"Saisir un nom ou pseudo\">
                 </div>
                 <div class=\"form-group\">
-                    <label>Password :</label>
-                    <input type=\"password\" required name=\"_password\" class=\"form-control\">
+                    <label>Mot de passe :</label>
+                    <input type=\"password\" required name=\"_password\" class=\"form-control\" placeholder=\"saisissez votre mot de passe\">
                 </div>
                 <div class=\"text-center\">
                     <input type=\"submit\" class=\"btn btn-primary\" value=\"s'identifier\">

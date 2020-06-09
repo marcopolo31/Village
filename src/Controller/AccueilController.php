@@ -13,7 +13,7 @@ class AccueilController extends AbstractController
     /**
      * @Route("/", name="accueil")
      */
-    public function index(InformationRepository $repository, Request $request)
+    public function index(InformationRepository $repository)
     {   
         return $this->render('accueil/index.html.twig', [
             'informations' => $repository->findInfoRecent()
