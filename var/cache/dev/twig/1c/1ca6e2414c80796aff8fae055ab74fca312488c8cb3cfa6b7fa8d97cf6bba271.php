@@ -87,13 +87,13 @@ class __TwigTemplate_bea3937d5f5a12f0ea971a3523286750403cd7f3caa8683c4d710eb3c61
             echo "        <li class=\"nav-item active\">
           <a class=\"nav-link\" href=\"";
             // line 31
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("afficher_categorie", ["id" => 17]);
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("afficher_categorie", ["id" => 19]);
             echo "\"><i class=\"far fa-calendar-alt\"></i> Événements</a>
         </li>
         <li class=\"nav-item active\">
           <a class=\"nav-link\" href=\"";
             // line 34
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("afficher_categorie", ["id" => 18]);
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("afficher_categorie", ["id" => 20]);
             echo "\"><i class=\"far fa-newspaper\"></i> Actualités</a>
         </li>
         ";
@@ -442,10 +442,10 @@ class __TwigTemplate_bea3937d5f5a12f0ea971a3523286750403cd7f3caa8683c4d710eb3c61
 
         {% if not app.user %}
         <li class=\"nav-item active\">
-          <a class=\"nav-link\" href=\"{{path('afficher_categorie', {id : 17})}}\"><i class=\"far fa-calendar-alt\"></i> Événements</a>
+          <a class=\"nav-link\" href=\"{{path('afficher_categorie', {id : 19})}}\"><i class=\"far fa-calendar-alt\"></i> Événements</a>
         </li>
         <li class=\"nav-item active\">
-          <a class=\"nav-link\" href=\"{{path('afficher_categorie', {id : 18})}}\"><i class=\"far fa-newspaper\"></i> Actualités</a>
+          <a class=\"nav-link\" href=\"{{path('afficher_categorie', {id : 20})}}\"><i class=\"far fa-newspaper\"></i> Actualités</a>
         </li>
         {% else %}
         <li class=\"nav-item active\">

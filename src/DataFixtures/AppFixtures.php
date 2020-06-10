@@ -4,11 +4,20 @@ namespace App\DataFixtures;
 
 use App\Entity\Categorie;
 use App\Entity\Information;
+use App\Entity\Utilisateur;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class AppFixtures extends Fixture
 {
+    private $encoder;
+
+    public function __construct(UserPasswordEncoderInterface $encoder){
+        $this->encoder = $encoder;
+    }
+  
+
     public function load(ObjectManager $manager)
     {   
 
@@ -110,10 +119,17 @@ class AppFixtures extends Fixture
                 ->setImage("poste.jpg")
                 ->setDate("Du 23 Mars 2020 au 06 Juin 2020")
                 ->setUpdatedAt($faker->dateTimeBetween($startDate = '-3 months', $endDate = 'now', $timezone = null))
-            ->setCreatedAt($faker->dateTimeBetween($startDate = '-6 months', $endDate = 'now', $timezone = null))
+                ->setCreatedAt($faker->dateTimeBetween($startDate = '-6 months', $endDate = 'now', $timezone = null))
                 ->setCategorie($cat2)
                 ;
         $manager->persist($info8);
+
+        $adminUser = new Utilisateur();
+        $adminUser->setUsername('admin_mairie')
+                    ->setPassword($this->encoder->encodePassword($adminUser, 'password'))
+                    ->setRoles('ROLE_ADMIN');
+        $manager->persist($adminUser);
+
         // $product = new Product();
         // $manager->persist($product);
 
