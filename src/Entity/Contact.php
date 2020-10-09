@@ -34,7 +34,7 @@ class Contact
      * @Assert\Regex(
      * pattern="/^[0-9]{10}$/",
      * match=false,
-     * message ="il doit contenir 10max"
+     * message ="il doit contenir 10 max"
      * )
      */
     private $phone;

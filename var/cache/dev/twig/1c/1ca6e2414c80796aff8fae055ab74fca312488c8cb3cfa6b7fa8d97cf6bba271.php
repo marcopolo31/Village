@@ -30,7 +30,6 @@ class __TwigTemplate_bea3937d5f5a12f0ea971a3523286750403cd7f3caa8683c4d710eb3c61
             'title' => [$this, 'block_title'],
             'stylesheets' => [$this, 'block_stylesheets'],
             'slide' => [$this, 'block_slide'],
-            'monTitre' => [$this, 'block_monTitre'],
             'body' => [$this, 'block_body'],
             'javascripts' => [$this, 'block_javascripts'],
         ];
@@ -62,9 +61,12 @@ class __TwigTemplate_bea3937d5f5a12f0ea971a3523286750403cd7f3caa8683c4d710eb3c61
         echo "</head>
 
 <body>
-  <nav class=\" navbar navbar-expand-lg navbar-dark bg-dark fixed-top\">
+  <div class=\"img-village\">
+
+  </div>
+  <nav class=\" navbar navbar-expand-lg navbar-dark bg-dark\">
     <a class=\"navbar-brand\" href=\"";
-        // line 18
+        // line 21
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil");
         echo "\">Mairie</a>
     <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\"
@@ -75,89 +77,89 @@ class __TwigTemplate_bea3937d5f5a12f0ea971a3523286750403cd7f3caa8683c4d710eb3c61
       <ul class=\"navbar-nav\">
         <li class=\"nav-item active \">
           <a class=\"nav-link\" href=\"";
-        // line 26
+        // line 29
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil");
         echo "\"><i class=\"fas fa-home\"></i> Accueil</a>
         </li>
 
         ";
-        // line 29
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 29, $this->source); })()), "user", [], "any", false, false, false, 29)) {
-            // line 30
+        // line 32
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 32, $this->source); })()), "user", [], "any", false, false, false, 32)) {
+            // line 33
             echo "        <li class=\"nav-item active\">
           <a class=\"nav-link\" href=\"";
-            // line 31
+            // line 34
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("afficher_categorie", ["id" => 19]);
             echo "\"><i class=\"far fa-calendar-alt\"></i> Événements</a>
         </li>
         <li class=\"nav-item active\">
           <a class=\"nav-link\" href=\"";
-            // line 34
+            // line 37
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("afficher_categorie", ["id" => 20]);
             echo "\"><i class=\"far fa-newspaper\"></i> Actualités</a>
         </li>
         ";
         } else {
-            // line 37
+            // line 40
             echo "        <li class=\"nav-item active\">
           <a class=\"nav-link\" href=\"";
-            // line 38
+            // line 41
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
             echo "\"><i class=\"fas fa-user-lock\"></i> Admin</a>
         </li>
         ";
         }
-        // line 41
+        // line 44
         echo "
         <li class=\"nav-item active\">
           <a class=\"nav-link\" href=\"";
-        // line 43
+        // line 46
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("histoire");
         echo "\"><i class=\"fas fa-history\"></i> Histoire</a>
         </li>
         <li class=\"nav-item active\">
           <a class=\"nav-link \" href=\"";
-        // line 46
+        // line 49
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
         echo "\"><i class=\"fas fa-address-book\"></i> Contact</a>
         </li>
 
         ";
-        // line 49
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 49, $this->source); })()), "user", [], "any", false, false, false, 49)) {
-            // line 50
+        // line 52
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 52, $this->source); })()), "user", [], "any", false, false, false, 52)) {
+            // line 53
             echo "        <li class=\"nav-item active\">
           <a class=\"nav-link \" href=\"";
-            // line 51
+            // line 54
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
             echo "\"><i class=\"fas fa-sign-in-alt\"></i> Login</a>
         </li>
         ";
         } else {
-            // line 54
+            // line 57
             echo "        <li class=\"nav-item active\">
           <a class=\"nav-link \" href=\"";
-            // line 55
+            // line 58
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
             echo "\"><i class=\"fas fa-sign-out-alt\"></i> Déconnexion</a>
         </li>
         ";
         }
-        // line 58
+        // line 61
         echo "
         ";
-        // line 59
+        // line 62
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 60
+            // line 63
             echo "        <li class=\"nav-item active\">
           <a class=\"nav-link \" href=\"";
-            // line 61
+            // line 64
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inscription");
             echo "\">inscription</a>
         </li>
         ";
         }
-        // line 64
+        // line 67
         echo "
       </ul>
     </div>
@@ -165,17 +167,11 @@ class __TwigTemplate_bea3937d5f5a12f0ea971a3523286750403cd7f3caa8683c4d710eb3c61
   
   <div id=\"carouselExampleFade\" class=\"carousel slide carousel-fade\" data-ride=\"carousel\">
     ";
-        // line 70
+        // line 73
         $this->displayBlock('slide', $context, $blocks);
-        // line 72
+        // line 75
         echo "  </div>
 
-  <div class=\"d-flex justify-content-center\">
-  <h1 class=\"border border-dark rounded p-2 m-2 bg-dark text-white text-center w-50\">";
-        // line 75
-        $this->displayBlock('monTitre', $context, $blocks);
-        echo "</h1>
-</div>
   ";
         // line 77
         $this->displayBlock('body', $context, $blocks);
@@ -304,7 +300,7 @@ class __TwigTemplate_bea3937d5f5a12f0ea971a3523286750403cd7f3caa8683c4d710eb3c61
 
     }
 
-    // line 70
+    // line 73
     public function block_slide($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -314,26 +310,8 @@ class __TwigTemplate_bea3937d5f5a12f0ea971a3523286750403cd7f3caa8683c4d710eb3c61
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "slide"));
 
-        // line 71
+        // line 74
         echo "    ";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
-
-    }
-
-    // line 75
-    public function block_monTitre($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "monTitre"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "monTitre"));
-
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -407,7 +385,7 @@ class __TwigTemplate_bea3937d5f5a12f0ea971a3523286750403cd7f3caa8683c4d710eb3c61
 
     public function getDebugInfo()
     {
-        return array (  377 => 138,  367 => 137,  356 => 78,  346 => 77,  328 => 75,  318 => 71,  308 => 70,  291 => 8,  281 => 7,  262 => 6,  250 => 149,  248 => 137,  212 => 104,  204 => 99,  183 => 80,  181 => 77,  176 => 75,  171 => 72,  169 => 70,  161 => 64,  155 => 61,  152 => 60,  150 => 59,  147 => 58,  141 => 55,  138 => 54,  132 => 51,  129 => 50,  127 => 49,  121 => 46,  115 => 43,  111 => 41,  105 => 38,  102 => 37,  96 => 34,  90 => 31,  87 => 30,  85 => 29,  79 => 26,  68 => 18,  62 => 14,  60 => 7,  56 => 6,  49 => 1,);
+        return array (  355 => 138,  345 => 137,  334 => 78,  324 => 77,  314 => 74,  304 => 73,  287 => 8,  277 => 7,  258 => 6,  246 => 149,  244 => 137,  208 => 104,  200 => 99,  179 => 80,  177 => 77,  173 => 75,  171 => 73,  163 => 67,  157 => 64,  154 => 63,  152 => 62,  149 => 61,  143 => 58,  140 => 57,  134 => 54,  131 => 53,  129 => 52,  123 => 49,  117 => 46,  113 => 44,  107 => 41,  104 => 40,  98 => 37,  92 => 34,  89 => 33,  87 => 32,  81 => 29,  70 => 21,  61 => 14,  59 => 7,  55 => 6,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -428,7 +406,10 @@ class __TwigTemplate_bea3937d5f5a12f0ea971a3523286750403cd7f3caa8683c4d710eb3c61
 </head>
 
 <body>
-  <nav class=\" navbar navbar-expand-lg navbar-dark bg-dark fixed-top\">
+  <div class=\"img-village\">
+
+  </div>
+  <nav class=\" navbar navbar-expand-lg navbar-dark bg-dark\">
     <a class=\"navbar-brand\" href=\"{{path('accueil')}}\">Mairie</a>
     <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\"
       aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
@@ -485,9 +466,6 @@ class __TwigTemplate_bea3937d5f5a12f0ea971a3523286750403cd7f3caa8683c4d710eb3c61
     {% endblock %}
   </div>
 
-  <div class=\"d-flex justify-content-center\">
-  <h1 class=\"border border-dark rounded p-2 m-2 bg-dark text-white text-center w-50\">{% block monTitre %}{% endblock %}</h1>
-</div>
   {% block body %}
   
   {% endblock %}
